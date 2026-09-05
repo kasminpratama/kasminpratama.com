@@ -1,0 +1,788 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Network Infrastructure | Kasmin Pratama</title>
+  <meta name="description" content="Kasmin Pratama's professional focus in practical network infrastructure implementation, including local networks, routing, switching, wireless connectivity, system integration, and troubleshooting.">
+  <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
+  <link rel="canonical" href="https://kasminpratama.com/network-infrastructure/">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Kasmin Pratama">
+  <meta property="og:title" content="Network Infrastructure | Kasmin Pratama">
+  <meta property="og:description" content="Professional focus on practical network infrastructure implementation, configuration, connectivity, and supporting technology systems.">
+  <meta property="og:url" content="https://kasminpratama.com/network-infrastructure/">
+  <meta property="og:locale" content="en_US">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Network Infrastructure | Kasmin Pratama">
+  <meta name="twitter:description" content="Professional focus on practical network infrastructure implementation, configuration, connectivity, and supporting technology systems.">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://kasminpratama.com/network-infrastructure/#webpage",
+        "url": "https://kasminpratama.com/network-infrastructure/",
+        "name": "Network Infrastructure | Kasmin Pratama",
+        "description": "Professional focus on practical network infrastructure implementation, configuration, connectivity, and supporting technology systems.",
+        "inLanguage": "en",
+        "isPartOf": {
+          "@id": "https://kasminpratama.com/#website"
+        },
+        "about": {
+          "@id": "https://kasminpratama.com/#person"
+        },
+        "mainEntity": {
+          "@id": "https://kasminpratama.com/#person"
+        },
+        "breadcrumb": {
+          "@id": "https://kasminpratama.com/network-infrastructure/#breadcrumb"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://kasminpratama.com/network-infrastructure/#breadcrumb",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://kasminpratama.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Network Infrastructure",
+            "item": "https://kasminpratama.com/network-infrastructure/"
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    :root {
+      --bg: #f4f3f0;
+      --surface: #ffffff;
+      --text: #18191d;
+      --muted: #65676f;
+      --line: #d9d7d1;
+      --accent: #321493;
+      --max: 1120px;
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      width: min(calc(100% - 48px), var(--max));
+      margin: 0 auto;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(244, 243, 240, .94);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .nav {
+      min-height: 74px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 32px;
+    }
+
+    .brand {
+      font-size: 1.2rem;
+      font-weight: 800;
+      letter-spacing: -.04em;
+    }
+
+    .brand span { color: var(--accent); }
+
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      font-size: .82rem;
+      color: var(--muted);
+    }
+
+    nav a:hover,
+    nav a[aria-current="page"] { color: var(--text); }
+
+    main { overflow: hidden; }
+
+    section {
+      padding: 100px 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .hero { padding: 120px 0 105px; }
+
+    .eyebrow {
+      margin: 0 0 22px;
+      color: var(--accent);
+      font-size: .72rem;
+      font-weight: 800;
+      letter-spacing: .2em;
+    }
+
+    h1, h2, h3 {
+      margin: 0;
+      letter-spacing: -.045em;
+      line-height: 1.05;
+    }
+
+    h1 {
+      max-width: 950px;
+      font-size: clamp(3.2rem, 8vw, 7.4rem);
+    }
+
+    h2 {
+      max-width: 800px;
+      font-size: clamp(2.1rem, 4vw, 4.2rem);
+    }
+
+    h3 { font-size: 1.4rem; }
+
+    .lead {
+      max-width: 780px;
+      margin: 35px 0 0;
+      color: var(--muted);
+      font-size: clamp(1.05rem, 2vw, 1.35rem);
+    }
+
+    .intro-grid,
+    .two-col {
+      display: grid;
+      grid-template-columns: .9fr 1.1fr;
+      gap: 100px;
+      align-items: start;
+    }
+
+    .body-copy {
+      max-width: 700px;
+      color: var(--muted);
+      font-size: 1.05rem;
+    }
+
+    .body-copy p:first-child { margin-top: 0; }
+
+    .focus-list,
+    .component-list {
+      margin-top: 60px;
+      border-top: 1px solid var(--line);
+    }
+
+    .focus-item,
+    .component-item {
+      display: grid;
+      grid-template-columns: 95px 1fr;
+      gap: 28px;
+      padding: 38px 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .number {
+      padding-top: 5px;
+      color: var(--accent);
+      font-size: .75rem;
+      font-weight: 800;
+      letter-spacing: .12em;
+    }
+
+    .focus-item p,
+    .component-item p {
+      max-width: 700px;
+      margin: 13px 0 0;
+      color: var(--muted);
+    }
+
+    .process {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      margin-top: 60px;
+      border-top: 1px solid var(--line);
+      border-left: 1px solid var(--line);
+    }
+
+    .process-item {
+      min-height: 260px;
+      padding: 28px;
+      border-right: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .process-item .number {
+      display: block;
+      margin-bottom: 60px;
+    }
+
+    .process-item p {
+      margin: 14px 0 0;
+      color: var(--muted);
+      font-size: .9rem;
+    }
+
+    .note {
+      margin-top: 38px;
+      padding: 28px 30px;
+      border-left: 3px solid var(--accent);
+      background: rgba(50, 20, 147, .045);
+      color: var(--muted);
+    }
+
+    .experience-box {
+      margin-top: 60px;
+      padding: 45px;
+      border: 1px solid var(--line);
+      background: var(--surface);
+    }
+
+    .experience-box p {
+      max-width: 760px;
+      color: var(--muted);
+    }
+
+    .scope-list {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px 28px;
+      padding: 0;
+      margin: 32px 0 0;
+      list-style: none;
+      color: var(--muted);
+      font-size: .92rem;
+    }
+
+    .scope-list li::before {
+      content: "— ";
+      color: var(--accent);
+    }
+
+    .related-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1px;
+      margin-top: 55px;
+      background: var(--line);
+      border: 1px solid var(--line);
+    }
+
+    .card {
+      min-height: 250px;
+      padding: 35px;
+      background: var(--bg);
+    }
+
+    .card .number {
+      display: block;
+      margin-bottom: 55px;
+    }
+
+    .card p {
+      margin: 14px 0 0;
+      color: var(--muted);
+      font-size: .92rem;
+    }
+
+    .related-card { transition: background .2s ease; }
+    .related-card:hover { background: #ebe9e3; }
+
+    .arrow {
+      display: inline-block;
+      margin-top: 35px;
+      color: var(--accent);
+      font-size: 1.3rem;
+    }
+
+    .closing {
+      padding: 120px 0;
+      border-bottom: 0;
+    }
+
+    .closing p {
+      max-width: 850px;
+      margin: 35px 0 0;
+      color: var(--muted);
+      font-size: clamp(1.15rem, 2.2vw, 1.6rem);
+    }
+
+    footer {
+      padding: 40px 0;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: .82rem;
+    }
+
+    .footer-row {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    @media (max-width: 900px) {
+      nav { display: none; }
+
+      .intro-grid,
+      .two-col {
+        grid-template-columns: 1fr;
+        gap: 45px;
+      }
+
+      .process { grid-template-columns: 1fr 1fr; }
+      .related-grid { grid-template-columns: 1fr; }
+      .scope-list { grid-template-columns: 1fr 1fr; }
+    }
+
+    @media (max-width: 600px) {
+      .container {
+        width: min(calc(100% - 36px), var(--max));
+      }
+
+      .nav { min-height: 66px; }
+
+      section { padding: 72px 0; }
+      .hero { padding: 95px 0 75px; }
+
+      h1 { font-size: clamp(3rem, 16vw, 5rem); }
+
+      .focus-item,
+      .component-item {
+        grid-template-columns: 58px 1fr;
+        gap: 16px;
+      }
+
+      .process { grid-template-columns: 1fr; }
+
+      .process-item { min-height: 220px; }
+
+      .scope-list { grid-template-columns: 1fr; }
+
+      .experience-box { padding: 30px 24px; }
+
+      .footer-row { flex-direction: column; }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="container nav">
+      <a class="brand" href="/" aria-label="Kasmin Pratama Home">KASMIN<span>.</span></a>
+
+      <nav aria-label="Primary navigation">
+        <a href="/#about">About</a>
+        <a href="/#expertise" aria-current="page">Expertise</a>
+        <a href="/#certifications">Certifications</a>
+        <a href="/#background">Background</a>
+        <a href="/#selected-work">Selected Work</a>
+        <a href="/#mivision">MIVISION</a>
+        <a href="/#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <p class="eyebrow">02 / PROFESSIONAL EXPERTISE</p>
+        <h1>Network Infrastructure.</h1>
+        <p class="lead">
+          Professional focus on the practical implementation, configuration,
+          connectivity, and supporting infrastructure required for networked
+          technology environments.
+        </p>
+      </div>
+    </section>
+
+    <section>
+      <div class="container intro-grid">
+        <div>
+          <p class="eyebrow">OVERVIEW</p>
+          <h2>Building the infrastructure behind connected systems.</h2>
+        </div>
+
+        <div class="body-copy">
+          <p>
+            Network infrastructure provides the communication layer that allows
+            connected devices and technology systems to operate together.
+            Reliable implementation requires more than connecting individual
+            devices; it requires appropriate configuration, connectivity,
+            integration, and systematic testing.
+          </p>
+
+          <p>
+            My professional focus is centered on practical technical work
+            involving network environments and the supporting infrastructure
+            used by connected technology systems.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <p class="eyebrow">PROFESSIONAL FOCUS</p>
+        <h2>Technical areas of network infrastructure.</h2>
+
+        <div class="focus-list">
+          <article class="focus-item">
+            <div class="number">01</div>
+            <div>
+              <h3>Local Network Infrastructure</h3>
+              <p>
+                Practical work involving the implementation and supporting
+                infrastructure of local network environments used to connect
+                devices, systems, and technology services.
+              </p>
+            </div>
+          </article>
+
+          <article class="focus-item">
+            <div class="number">02</div>
+            <div>
+              <h3>Routing &amp; Network Connectivity</h3>
+              <p>
+                Technical focus on network connectivity and the configuration
+                of network devices required to establish communication between
+                local infrastructure and connected services.
+              </p>
+            </div>
+          </article>
+
+          <article class="focus-item">
+            <div class="number">03</div>
+            <div>
+              <h3>Switching &amp; Network Distribution</h3>
+              <p>
+                Supporting network distribution through appropriate physical
+                and logical connectivity between network devices and connected
+                systems.
+              </p>
+            </div>
+          </article>
+
+          <article class="focus-item">
+            <div class="number">04</div>
+            <div>
+              <h3>Wireless Infrastructure</h3>
+              <p>
+                Practical consideration of wireless connectivity as part of a
+                broader network environment, including the deployment and
+                integration of wireless access infrastructure where required.
+              </p>
+            </div>
+          </article>
+
+          <article class="focus-item">
+            <div class="number">05</div>
+            <div>
+              <h3>Network Troubleshooting</h3>
+              <p>
+                Systematic identification of connectivity and communication
+                issues within networked technology environments, followed by
+                practical technical evaluation and corrective action.
+              </p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <p class="eyebrow">PRACTICAL IMPLEMENTATION</p>
+        <h2>From infrastructure planning to system testing.</h2>
+
+        <div class="process">
+          <article class="process-item">
+            <span class="number">01</span>
+            <h3>Planning</h3>
+            <p>
+              Reviewing technical requirements, connected devices, and the
+              infrastructure required for the intended network environment.
+            </p>
+          </article>
+
+          <article class="process-item">
+            <span class="number">02</span>
+            <h3>Deployment</h3>
+            <p>
+              Preparing and installing relevant network devices and supporting
+              physical infrastructure.
+            </p>
+          </article>
+
+          <article class="process-item">
+            <span class="number">03</span>
+            <h3>Configuration</h3>
+            <p>
+              Configuring network devices and relevant parameters according to
+              the technical requirements of the environment.
+            </p>
+          </article>
+
+          <article class="process-item">
+            <span class="number">04</span>
+            <h3>Integration</h3>
+            <p>
+              Integrating connected devices and technology systems with the
+              supporting network environment.
+            </p>
+          </article>
+
+          <article class="process-item">
+            <span class="number">05</span>
+            <h3>Testing</h3>
+            <p>
+              Verifying connectivity and communication between relevant devices
+              and systems after implementation.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container two-col">
+        <div>
+          <p class="eyebrow">NETWORK ENVIRONMENT</p>
+          <h2>Understanding the connected technology environment.</h2>
+        </div>
+
+        <div class="body-copy">
+          <p>
+            A network environment can consist of multiple interconnected
+            layers. Each component contributes to the movement of data and the
+            operation of connected technology systems.
+          </p>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="component-list">
+          <article class="component-item">
+            <div class="number">01</div>
+            <div>
+              <h3>Gateway &amp; Routing</h3>
+              <p>
+                Network devices and configuration responsible for managing
+                connectivity between different network environments and
+                services.
+              </p>
+            </div>
+          </article>
+
+          <article class="component-item">
+            <div class="number">02</div>
+            <div>
+              <h3>Switching &amp; Distribution</h3>
+              <p>
+                Infrastructure supporting communication and connectivity
+                between devices within a local network environment.
+              </p>
+            </div>
+          </article>
+
+          <article class="component-item">
+            <div class="number">03</div>
+            <div>
+              <h3>Wireless Access</h3>
+              <p>
+                Wireless infrastructure supporting network access for
+                compatible devices within the intended coverage environment.
+              </p>
+            </div>
+          </article>
+
+          <article class="component-item">
+            <div class="number">04</div>
+            <div>
+              <h3>End-Device Connectivity</h3>
+              <p>
+                The connection of relevant devices and technology systems to
+                the supporting network infrastructure.
+              </p>
+            </div>
+          </article>
+
+          <article class="component-item">
+            <div class="number">05</div>
+            <div>
+              <h3>Supporting Infrastructure</h3>
+              <p>
+                Cabling, power, equipment placement, and other physical
+                elements supporting practical network deployment.
+              </p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container two-col">
+        <div>
+          <p class="eyebrow">SYSTEM INTEGRATION</p>
+          <h2>Infrastructure as a supporting technology layer.</h2>
+        </div>
+
+        <div class="body-copy">
+          <p>
+            Network infrastructure often supports other connected technology
+            systems. Surveillance systems, internet connectivity, and other
+            network-enabled environments depend on appropriate communication
+            between devices and supporting infrastructure.
+          </p>
+
+          <p>
+            This relationship makes network infrastructure an important
+            technical foundation within broader technology implementation.
+          </p>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="note">
+          Related expertise:
+          <a href="/cctv-surveillance/"><strong>CCTV &amp; Surveillance Systems</strong></a>
+          and
+          <a href="/starlink-connectivity/"><strong>Starlink &amp; Internet Connectivity</strong></a>.
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <p class="eyebrow">PRACTICAL EXPERIENCE</p>
+        <h2>Selected experience.</h2>
+
+        <div class="experience-box">
+          <h3>Network Infrastructure Implementation</h3>
+          <p>
+            This section is intended to document actual professional work
+            involving network infrastructure. Specific projects should only be
+            added when sufficient documentation is available and the
+            information is appropriate to publish.
+          </p>
+
+          <ul class="scope-list">
+            <li>Infrastructure preparation</li>
+            <li>Device deployment</li>
+            <li>Network configuration</li>
+            <li>Connectivity setup</li>
+            <li>System integration</li>
+            <li>Network testing</li>
+          </ul>
+
+          <div class="note">
+            Specific project documentation, technologies used, professional
+            role, technical objectives, and verified outcomes can be added as
+            documented records become available.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <p class="eyebrow">CERTIFICATIONS</p>
+        <h2>Relevant professional credentials.</h2>
+
+        <div class="body-copy">
+          <p>
+            No separate network-specific certification is presented on this
+            page at this stage. Professional certifications should be listed
+            only when their relevance and documented status can be verified.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <p class="eyebrow">RELATED EXPERTISE</p>
+        <h2>Connected areas of technology implementation.</h2>
+
+        <div class="related-grid">
+          <a class="card related-card" href="/cctv-surveillance/">
+            <span class="number">01</span>
+            <h3>CCTV &amp; Surveillance Systems</h3>
+            <p>
+              Practical implementation and supporting infrastructure for CCTV
+              and surveillance environments.
+            </p>
+            <span class="arrow" aria-hidden="true">↗</span>
+          </a>
+
+          <a class="card related-card" href="/starlink-connectivity/">
+            <span class="number">03</span>
+            <h3>Starlink &amp; Internet Connectivity</h3>
+            <p>
+              Internet connectivity implementation and integration with
+              supporting network infrastructure.
+            </p>
+            <span class="arrow" aria-hidden="true">↗</span>
+          </a>
+
+          <a class="card related-card" href="/">
+            <span class="number">HOME</span>
+            <h3>Professional Profile</h3>
+            <p>
+              Return to the main professional profile of Kasmin Pratama.
+            </p>
+            <span class="arrow" aria-hidden="true">↗</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="closing">
+      <div class="container">
+        <p class="eyebrow">PROFESSIONAL FOCUS</p>
+        <h2>Reliable systems depend on reliable connectivity.</h2>
+        <p>
+          Network infrastructure provides an essential technical layer for
+          connected technology environments. My professional focus is centered
+          on practical involvement in implementation, configuration,
+          integration, and technical support for networked systems.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-row">
+      <span>© 2026 Kasmin Pratama</span>
+      <a href="/">Back to Professional Profile</a>
+    </div>
+  </footer>
+</body>
+</html>
