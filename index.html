@@ -69,7 +69,10 @@ nav{
 .brand span{color:var(--accent)}
 .nav-links{display:flex;gap:30px;font-size:13px;color:var(--muted)}
 .nav-links a:hover{color:var(--accent)}
-.menu-btn{display:none;background:none;border:0;font-size:24px}
+.menu-btn{
+  display:none;background:none;border:0;font-size:24px;line-height:1;
+  color:var(--ink);cursor:pointer;
+}
 
 /* Hero */
 .hero{
@@ -219,8 +222,30 @@ footer{padding:35px 0}
 
 @media(max-width:800px){
   .container{padding:0 20px}
-  .nav-links{display:none}
+
+  /* Mobile navigation only */
+  .nav-inner{position:relative}
+  .nav-links{
+    display:none;
+    position:absolute;
+    top:76px;left:0;right:0;
+    flex-direction:column;
+    gap:0;
+    padding:10px 20px 18px;
+    background:rgba(245,245,242,.98);
+    backdrop-filter:blur(14px);
+    border-bottom:1px solid var(--line);
+  }
+  nav.nav-open .nav-links{display:flex}
+  .nav-links a{
+    display:block;
+    padding:14px 0;
+    border-top:1px solid var(--line);
+    font-size:14px;
+  }
+  .nav-links a:first-child{border-top:0}
   .menu-btn{display:block}
+  .menu-btn[aria-expanded="true"]{transform:rotate(45deg)}
   .hero{min-height:auto;padding:110px 0}
   .hero-grid,.about-grid,.contact-grid{grid-template-columns:1fr;gap:50px}
   .hero-side{border-left:0;border-top:1px solid var(--line);padding:30px 0 0}
@@ -304,7 +329,7 @@ footer{padding:35px 0}
 <nav aria-label="Primary navigation">
   <div class="container nav-inner">
     <a href="#home" class="brand">KASMIN<span>.</span></a>
-    <div class="nav-links">
+    <div class="nav-links" id="mobile-navigation">
       <a href="#about">About</a>
       <a href="#expertise">Expertise</a>
       <a href="#certifications">Certifications</a>
@@ -313,7 +338,8 @@ footer{padding:35px 0}
       <a href="#mivision">MIVISION</a>
       <a href="#contact">Contact</a>
     </div>
-    <button class="menu-btn" aria-label="Menu">+</button>
+    <button class="menu-btn" type="button" aria-label="Open navigation menu"
+      aria-expanded="false" aria-controls="mobile-navigation">+</button>
   </div>
 </nav>
 
@@ -563,6 +589,44 @@ footer{padding:35px 0}
     <div>Professional Profile · Technology Systems</div>
   </div>
 </footer>
+
+
+<script>
+(() => {
+  const nav = document.querySelector('nav[aria-label="Primary navigation"]');
+  const menuButton = document.querySelector('.menu-btn');
+  const navLinks = document.getElementById('mobile-navigation');
+
+  if (!nav || !menuButton || !navLinks) return;
+
+  const closeMenu = () => {
+    nav.classList.remove('nav-open');
+    menuButton.setAttribute('aria-expanded', 'false');
+    menuButton.setAttribute('aria-label', 'Open navigation menu');
+  };
+
+  menuButton.addEventListener('click', () => {
+    const isOpen = nav.classList.toggle('nav-open');
+    menuButton.setAttribute('aria-expanded', String(isOpen));
+    menuButton.setAttribute(
+      'aria-label',
+      isOpen ? 'Close navigation menu' : 'Open navigation menu'
+    );
+  });
+
+  navLinks.addEventListener('click', (event) => {
+    if (event.target.closest('a')) closeMenu();
+  });
+
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape') closeMenu();
+  });
+
+  window.addEventListener('resize', () => {
+    if (window.innerWidth > 800) closeMenu();
+  });
+})();
+</script>
 
 </body>
 </html>
