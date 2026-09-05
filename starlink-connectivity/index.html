@@ -1,0 +1,787 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Starlink & Internet Connectivity | Kasmin Pratama</title>
+  <meta name="description" content="Kasmin Pratama's professional focus in practical Starlink deployment, internet connectivity, local network integration, and supporting infrastructure for connected technology environments.">
+  <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
+  <link rel="canonical" href="https://kasminpratama.com/starlink-connectivity/">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Kasmin Pratama">
+  <meta property="og:title" content="Starlink & Internet Connectivity | Kasmin Pratama">
+  <meta property="og:description" content="Professional focus on practical Starlink deployment, internet connectivity, network integration, and supporting infrastructure.">
+  <meta property="og:url" content="https://kasminpratama.com/starlink-connectivity/">
+  <meta property="og:locale" content="en_US">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Starlink & Internet Connectivity | Kasmin Pratama">
+  <meta name="twitter:description" content="Professional focus on practical Starlink deployment, internet connectivity, network integration, and supporting infrastructure.">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://kasminpratama.com/starlink-connectivity/#webpage",
+        "url": "https://kasminpratama.com/starlink-connectivity/",
+        "name": "Starlink & Internet Connectivity | Kasmin Pratama",
+        "description": "Professional focus on practical Starlink deployment, internet connectivity, network integration, and supporting infrastructure.",
+        "inLanguage": "en",
+        "isPartOf": {
+          "@id": "https://kasminpratama.com/#website"
+        },
+        "about": {
+          "@id": "https://kasminpratama.com/#person"
+        },
+        "mainEntity": {
+          "@id": "https://kasminpratama.com/#person"
+        },
+        "breadcrumb": {
+          "@id": "https://kasminpratama.com/starlink-connectivity/#breadcrumb"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://kasminpratama.com/starlink-connectivity/#breadcrumb",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://kasminpratama.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Starlink & Internet Connectivity",
+            "item": "https://kasminpratama.com/starlink-connectivity/"
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    :root {
+      --bg: #f4f3f0;
+      --surface: #ffffff;
+      --text: #18191d;
+      --muted: #65676f;
+      --line: #d9d7d1;
+      --accent: #321493;
+      --max: 1120px;
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      width: min(calc(100% - 48px), var(--max));
+      margin: 0 auto;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(244, 243, 240, .94);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .nav {
+      min-height: 74px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 32px;
+    }
+
+    .brand {
+      font-size: 1.2rem;
+      font-weight: 800;
+      letter-spacing: -.04em;
+    }
+
+    .brand span { color: var(--accent); }
+
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      font-size: .82rem;
+      color: var(--muted);
+    }
+
+    nav a:hover,
+    nav a[aria-current="page"] { color: var(--text); }
+
+    main { overflow: hidden; }
+
+    section {
+      padding: 100px 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .hero { padding: 120px 0 105px; }
+
+    .eyebrow {
+      margin: 0 0 22px;
+      color: var(--accent);
+      font-size: .72rem;
+      font-weight: 800;
+      letter-spacing: .2em;
+    }
+
+    h1, h2, h3 {
+      margin: 0;
+      letter-spacing: -.045em;
+      line-height: 1.05;
+    }
+
+    h1 {
+      max-width: 1000px;
+      font-size: clamp(3.1rem, 7.4vw, 7rem);
+    }
+
+    h2 {
+      max-width: 830px;
+      font-size: clamp(2.1rem, 4vw, 4.2rem);
+    }
+
+    h3 { font-size: 1.4rem; }
+
+    .lead {
+      max-width: 790px;
+      margin: 35px 0 0;
+      color: var(--muted);
+      font-size: clamp(1.05rem, 2vw, 1.35rem);
+    }
+
+    .intro-grid,
+    .two-col {
+      display: grid;
+      grid-template-columns: .9fr 1.1fr;
+      gap: 100px;
+      align-items: start;
+    }
+
+    .body-copy {
+      max-width: 720px;
+      color: var(--muted);
+      font-size: 1.05rem;
+    }
+
+    .body-copy p:first-child { margin-top: 0; }
+
+    .focus-list,
+    .component-list {
+      margin-top: 60px;
+      border-top: 1px solid var(--line);
+    }
+
+    .focus-item,
+    .component-item {
+      display: grid;
+      grid-template-columns: 95px 1fr;
+      gap: 28px;
+      padding: 38px 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .number {
+      padding-top: 5px;
+      color: var(--accent);
+      font-size: .75rem;
+      font-weight: 800;
+      letter-spacing: .12em;
+    }
+
+    .focus-item p,
+    .component-item p {
+      max-width: 710px;
+      margin: 13px 0 0;
+      color: var(--muted);
+    }
+
+    .process {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      margin-top: 60px;
+      border-top: 1px solid var(--line);
+      border-left: 1px solid var(--line);
+    }
+
+    .process-item {
+      min-height: 270px;
+      padding: 28px;
+      border-right: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .process-item .number {
+      display: block;
+      margin-bottom: 60px;
+    }
+
+    .process-item p {
+      margin: 14px 0 0;
+      color: var(--muted);
+      font-size: .9rem;
+    }
+
+    .note {
+      margin-top: 38px;
+      padding: 28px 30px;
+      border-left: 3px solid var(--accent);
+      background: rgba(50, 20, 147, .045);
+      color: var(--muted);
+    }
+
+    .experience-box {
+      margin-top: 60px;
+      padding: 45px;
+      border: 1px solid var(--line);
+      background: var(--surface);
+    }
+
+    .experience-box p {
+      max-width: 790px;
+      color: var(--muted);
+    }
+
+    .scope-list {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px 28px;
+      padding: 0;
+      margin: 32px 0 0;
+      list-style: none;
+      color: var(--muted);
+      font-size: .92rem;
+    }
+
+    .scope-list li::before {
+      content: "— ";
+      color: var(--accent);
+    }
+
+    .related-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1px;
+      margin-top: 55px;
+      background: var(--line);
+      border: 1px solid var(--line);
+    }
+
+    .card {
+      min-height: 250px;
+      padding: 35px;
+      background: var(--bg);
+    }
+
+    .card .number {
+      display: block;
+      margin-bottom: 55px;
+    }
+
+    .card p {
+      margin: 14px 0 0;
+      color: var(--muted);
+      font-size: .92rem;
+    }
+
+    .related-card { transition: background .2s ease; }
+    .related-card:hover { background: #ebe9e3; }
+
+    .arrow {
+      display: inline-block;
+      margin-top: 35px;
+      color: var(--accent);
+      font-size: 1.3rem;
+    }
+
+    .closing {
+      padding: 120px 0;
+      border-bottom: 0;
+    }
+
+    .closing p {
+      max-width: 850px;
+      margin: 35px 0 0;
+      color: var(--muted);
+      font-size: clamp(1.15rem, 2.2vw, 1.6rem);
+    }
+
+    footer {
+      padding: 40px 0;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: .82rem;
+    }
+
+    .footer-row {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    @media (max-width: 900px) {
+      nav { display: none; }
+
+      .intro-grid,
+      .two-col {
+        grid-template-columns: 1fr;
+        gap: 45px;
+      }
+
+      .process { grid-template-columns: 1fr 1fr; }
+      .related-grid { grid-template-columns: 1fr; }
+      .scope-list { grid-template-columns: 1fr 1fr; }
+    }
+
+    @media (max-width: 600px) {
+      .container {
+        width: min(calc(100% - 36px), var(--max));
+      }
+
+      .nav { min-height: 66px; }
+      section { padding: 72px 0; }
+      .hero { padding: 95px 0 75px; }
+
+      h1 { font-size: clamp(3rem, 15vw, 5rem); }
+
+      .focus-item,
+      .component-item {
+        grid-template-columns: 58px 1fr;
+        gap: 16px;
+      }
+
+      .process { grid-template-columns: 1fr; }
+      .process-item { min-height: 220px; }
+      .scope-list { grid-template-columns: 1fr; }
+      .experience-box { padding: 30px 24px; }
+      .footer-row { flex-direction: column; }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="container nav">
+      <a class="brand" href="/" aria-label="Kasmin Pratama Home">KASMIN<span>.</span></a>
+
+      <nav aria-label="Primary navigation">
+        <a href="/#about">About</a>
+        <a href="/#expertise" aria-current="page">Expertise</a>
+        <a href="/#certifications">Certifications</a>
+        <a href="/#background">Background</a>
+        <a href="/#selected-work">Selected Work</a>
+        <a href="/#mivision">MIVISION</a>
+        <a href="/#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <p class="eyebrow">03 / PROFESSIONAL EXPERTISE</p>
+        <h1>Starlink &amp; Internet Connectivity.</h1>
+        <p class="lead">
+          Professional focus on the practical deployment of internet
+          connectivity solutions, including Starlink systems and their
+          integration with supporting network infrastructure.
+        </p>
+      </div>
+    </section>
+
+    <section>
+      <div class="container intro-grid">
+        <div>
+          <p class="eyebrow">OVERVIEW</p>
+          <h2>Connectivity requires more than an internet connection.</h2>
+        </div>
+
+        <div class="body-copy">
+          <p>
+            Internet connectivity is part of a broader technical environment.
+            A practical deployment requires appropriate equipment placement,
+            physical installation, system configuration, network integration,
+            and verification of connectivity.
+          </p>
+
+          <p>
+            My professional focus is centered on the practical implementation
+            of connectivity solutions and the supporting network infrastructure
+            required to distribute and use that connection within a technology
+            environment.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <p class="eyebrow">PROFESSIONAL FOCUS</p>
+        <h2>Technical areas of connectivity implementation.</h2>
+
+        <div class="focus-list">
+          <article class="focus-item">
+            <div class="number">01</div>
+            <div>
+              <h3>Starlink Deployment</h3>
+              <p>
+                Practical involvement in the deployment of Starlink internet
+                systems, including equipment preparation, physical placement,
+                installation considerations, and connection to the intended
+                network environment.
+              </p>
+            </div>
+          </article>
+
+          <article class="focus-item">
+            <div class="number">02</div>
+            <div>
+              <h3>Internet Connectivity Integration</h3>
+              <p>
+                Integrating an internet connection with the supporting local
+                network environment so connected devices and technology
+                systems can access the required network services.
+              </p>
+            </div>
+          </article>
+
+          <article class="focus-item">
+            <div class="number">03</div>
+            <div>
+              <h3>Supporting Network Infrastructure</h3>
+              <p>
+                Practical consideration of routers, gateways, wireless access,
+                cabling, and other supporting infrastructure involved in the
+                distribution of internet connectivity.
+              </p>
+            </div>
+          </article>
+
+          <article class="focus-item">
+            <div class="number">04</div>
+            <div>
+              <h3>Connected System Integration</h3>
+              <p>
+                Supporting the connectivity requirements of network-enabled
+                technology systems, including the network environments used by
+                surveillance and other connected devices.
+              </p>
+            </div>
+          </article>
+
+          <article class="focus-item">
+            <div class="number">05</div>
+            <div>
+              <h3>Connectivity Troubleshooting</h3>
+              <p>
+                Practical technical evaluation of connectivity issues by
+                reviewing relevant equipment, local network configuration, and
+                communication between connected systems.
+              </p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <p class="eyebrow">IMPLEMENTATION APPROACH</p>
+        <h2>From physical deployment to connected operation.</h2>
+
+        <div class="process">
+          <article class="process-item">
+            <span class="number">01</span>
+            <h3>Assessment</h3>
+            <p>
+              Reviewing the deployment environment, technical requirements,
+              equipment, and supporting infrastructure.
+            </p>
+          </article>
+
+          <article class="process-item">
+            <span class="number">02</span>
+            <h3>Deployment</h3>
+            <p>
+              Preparing and physically deploying relevant connectivity
+              equipment according to the requirements of the environment.
+            </p>
+          </article>
+
+          <article class="process-item">
+            <span class="number">03</span>
+            <h3>Configuration</h3>
+            <p>
+              Configuring relevant equipment and supporting network parameters
+              for the intended connectivity environment.
+            </p>
+          </article>
+
+          <article class="process-item">
+            <span class="number">04</span>
+            <h3>Integration</h3>
+            <p>
+              Connecting the internet service with the local network and
+              relevant technology systems.
+            </p>
+          </article>
+
+          <article class="process-item">
+            <span class="number">05</span>
+            <h3>Verification</h3>
+            <p>
+              Testing connectivity and confirming communication within the
+              intended network environment.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container two-col">
+        <div>
+          <p class="eyebrow">CONNECTIVITY ENVIRONMENT</p>
+          <h2>Understanding the infrastructure around the connection.</h2>
+        </div>
+
+        <div class="body-copy">
+          <p>
+            An internet service does not operate in isolation. The practical
+            use of connectivity depends on the infrastructure that receives,
+            distributes, and manages network access for connected systems.
+          </p>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="component-list">
+          <article class="component-item">
+            <div class="number">01</div>
+            <div>
+              <h3>Internet Service Equipment</h3>
+              <p>
+                Equipment responsible for establishing the connection between
+                the deployment environment and the internet service.
+              </p>
+            </div>
+          </article>
+
+          <article class="component-item">
+            <div class="number">02</div>
+            <div>
+              <h3>Gateway &amp; Routing</h3>
+              <p>
+                Network infrastructure responsible for managing connectivity
+                between the internet connection and local network
+                environments.
+              </p>
+            </div>
+          </article>
+
+          <article class="component-item">
+            <div class="number">03</div>
+            <div>
+              <h3>Local Network Distribution</h3>
+              <p>
+                Infrastructure used to distribute connectivity to relevant
+                wired and network-connected devices.
+              </p>
+            </div>
+          </article>
+
+          <article class="component-item">
+            <div class="number">04</div>
+            <div>
+              <h3>Wireless Access</h3>
+              <p>
+                Wireless infrastructure used where appropriate to provide
+                network access for compatible connected devices.
+              </p>
+            </div>
+          </article>
+
+          <article class="component-item">
+            <div class="number">05</div>
+            <div>
+              <h3>Supporting Infrastructure</h3>
+              <p>
+                Cabling, mounting, power, equipment placement, and other
+                physical elements required for practical deployment.
+              </p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container two-col">
+        <div>
+          <p class="eyebrow">SYSTEM INTEGRATION</p>
+          <h2>Connectivity as part of a broader technology system.</h2>
+        </div>
+
+        <div class="body-copy">
+          <p>
+            Internet connectivity often supports other technology systems that
+            depend on reliable network communication. The relationship between
+            connectivity, local network infrastructure, and connected devices
+            is therefore an important part of practical technical
+            implementation.
+          </p>
+
+          <p>
+            This area of expertise connects directly with network
+            infrastructure and network-enabled surveillance systems.
+          </p>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="note">
+          Related expertise:
+          <a href="/network-infrastructure/"><strong>Network Infrastructure</strong></a>
+          and
+          <a href="/cctv-surveillance/"><strong>CCTV &amp; Surveillance Systems</strong></a>.
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <p class="eyebrow">PRACTICAL EXPERIENCE</p>
+        <h2>Selected experience.</h2>
+
+        <div class="experience-box">
+          <h3>Connectivity &amp; Network Integration</h3>
+          <p>
+            This section is designed to document actual professional work
+            involving Starlink deployment, internet connectivity, and
+            supporting network integration. Specific projects should be added
+            only when sufficient documentation is available and the information
+            is appropriate to publish.
+          </p>
+
+          <ul class="scope-list">
+            <li>Deployment preparation</li>
+            <li>Equipment installation</li>
+            <li>Connectivity configuration</li>
+            <li>Local network integration</li>
+            <li>Connected system support</li>
+            <li>Connectivity verification</li>
+          </ul>
+
+          <div class="note">
+            Specific project documentation, deployment environment, technology
+            details, professional role, and verified outcomes can be added as
+            documented records become available.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <p class="eyebrow">CERTIFICATIONS</p>
+        <h2>Relevant professional credentials.</h2>
+
+        <div class="body-copy">
+          <p>
+            No separate Starlink-specific certification is presented on this
+            page at this stage. Professional certifications should be listed
+            only when their relevance and documented status can be verified.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <p class="eyebrow">RELATED EXPERTISE</p>
+        <h2>Connected areas of technology implementation.</h2>
+
+        <div class="related-grid">
+          <a class="card related-card" href="/cctv-surveillance/">
+            <span class="number">01</span>
+            <h3>CCTV &amp; Surveillance Systems</h3>
+            <p>
+              Practical implementation and supporting infrastructure for CCTV
+              and surveillance environments.
+            </p>
+            <span class="arrow" aria-hidden="true">↗</span>
+          </a>
+
+          <a class="card related-card" href="/network-infrastructure/">
+            <span class="number">02</span>
+            <h3>Network Infrastructure</h3>
+            <p>
+              Local network connectivity and infrastructure supporting
+              connected technology systems.
+            </p>
+            <span class="arrow" aria-hidden="true">↗</span>
+          </a>
+
+          <a class="card related-card" href="/">
+            <span class="number">HOME</span>
+            <h3>Professional Profile</h3>
+            <p>
+              Return to the main professional profile of Kasmin Pratama.
+            </p>
+            <span class="arrow" aria-hidden="true">↗</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="closing">
+      <div class="container">
+        <p class="eyebrow">PROFESSIONAL FOCUS</p>
+        <h2>Connectivity is the foundation of connected technology.</h2>
+        <p>
+          Internet connectivity becomes most effective when it is properly
+          deployed and integrated with the surrounding network environment.
+          My professional focus is centered on practical involvement in
+          connectivity deployment, local network integration, and supporting
+          technology infrastructure.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-row">
+      <span>© 2026 Kasmin Pratama</span>
+      <a href="/">Back to Professional Profile</a>
+    </div>
+  </footer>
+</body>
+</html>
