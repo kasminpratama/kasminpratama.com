@@ -150,6 +150,21 @@ section{padding:130px 0;border-bottom:1px solid var(--line)}
 .card h3{font-size:28px;letter-spacing:-.04em;margin-top:50px}
 .card p{color:var(--muted);font-size:14px;margin-top:10px;max-width:380px}
 
+/* Certifications */
+.certification-grid{
+  margin-top:65px;display:grid;grid-template-columns:repeat(2,1fr);
+  border-top:1px solid var(--line);border-left:1px solid var(--line);
+}
+.certification{
+  min-height:210px;padding:34px;
+  border-right:1px solid var(--line);border-bottom:1px solid var(--line);
+  background:transparent;transition:.25s;
+}
+.certification:hover{background:var(--surface)}
+.certification h3{font-size:26px;letter-spacing:-.04em;margin-top:36px}
+.certification p{color:var(--muted);font-size:14px;margin-top:10px;max-width:380px}
+.certification-meta{margin-top:22px;color:var(--accent);font-size:12px;font-weight:800}
+
 /* Background */
 .timeline{margin-top:65px}
 .timeline-item{
@@ -210,7 +225,7 @@ footer{padding:35px 0}
   .hero-grid,.about-grid,.contact-grid{grid-template-columns:1fr;gap:50px}
   .hero-side{border-left:0;border-top:1px solid var(--line);padding:30px 0 0}
   section{padding:90px 0}
-  .cards{grid-template-columns:1fr}
+  .cards,.certification-grid{grid-template-columns:1fr}
   .timeline-item{grid-template-columns:1fr;gap:8px}
   .work{grid-template-columns:55px 1fr auto;gap:15px}
   .work h3{font-size:20px}
@@ -266,6 +281,13 @@ footer{padding:35px 0}
         "Technology Systems",
         "Field Implementation"
       ],
+      "hasCredential": [
+        {"@type":"EducationalOccupationalCredential","name":"HCSA-HIPC","credentialCategory":"Professional Certification","recognizedBy":{"@type":"Organization","name":"Hikvision"}},
+        {"@type":"EducationalOccupationalCredential","name":"HCSA-HNET","credentialCategory":"Professional Certification","recognizedBy":{"@type":"Organization","name":"Hikvision"}},
+        {"@type":"EducationalOccupationalCredential","name":"HCSA-HACE","credentialCategory":"Professional Certification","recognizedBy":{"@type":"Organization","name":"Hikvision"}},
+        {"@type":"EducationalOccupationalCredential","name":"HCSA-Maintenance","credentialCategory":"Professional Certification","recognizedBy":{"@type":"Organization","name":"Hikvision"}},
+        {"@type":"EducationalOccupationalCredential","name":"HCSA-Networking","credentialCategory":"Professional Certification","recognizedBy":{"@type":"Organization","name":"Hikvision"}}
+      ],
       "worksFor": {
         "@type": "Organization",
         "name": "MIVISION",
@@ -285,6 +307,7 @@ footer{padding:35px 0}
     <div class="nav-links">
       <a href="#about">About</a>
       <a href="#expertise">Expertise</a>
+      <a href="#certifications">Certifications</a>
       <a href="#background">Background</a>
       <a href="#work">Selected Work</a>
       <a href="#mivision">MIVISION</a>
@@ -382,9 +405,52 @@ footer{padding:35px 0}
   </div>
 </section>
 
+<section id="certifications">
+  <div class="container">
+    <div class="section-label">03 / Professional Certifications</div>
+    <h2 class="section-title">Professional training and verified technical credentials.</h2>
+    <p class="section-intro">
+      Professional certifications from Hikvision covering surveillance technology, networking, maintenance, and related technical systems. The certifications displayed below are shown with a stated validity through June 2028.
+    </p>
+
+    <div class="certification-grid">
+      <article class="certification">
+        <div class="card-num">01</div>
+        <h3>HCSA-HIPC</h3>
+        <p>Hikvision professional certification in security technology training.</p>
+        <div class="certification-meta">Hikvision Security Certification · Valid until June 2028</div>
+      </article>
+      <article class="certification">
+        <div class="card-num">02</div>
+        <h3>HCSA-HNET</h3>
+        <p>Hikvision professional certification in network-related technology training.</p>
+        <div class="certification-meta">Hikvision Security Certification · Valid until June 2028</div>
+      </article>
+      <article class="certification">
+        <div class="card-num">03</div>
+        <h3>HCSA-HACE</h3>
+        <p>Hikvision professional certification in technical security systems training.</p>
+        <div class="certification-meta">Hikvision Security Certification · Valid until June 2028</div>
+      </article>
+      <article class="certification">
+        <div class="card-num">04</div>
+        <h3>HCSA-Maintenance</h3>
+        <p>Hikvision professional certification focused on maintenance training.</p>
+        <div class="certification-meta">Hikvision Security Certification · Valid until June 2028</div>
+      </article>
+      <article class="certification">
+        <div class="card-num">05</div>
+        <h3>HCSA-Networking</h3>
+        <p>Hikvision professional certification focused on networking training.</p>
+        <div class="certification-meta">Hikvision Security Certification · Valid until June 2028</div>
+      </article>
+    </div>
+  </div>
+</section>
+
 <section id="background">
   <div class="container">
-    <div class="section-label">03 / Background</div>
+    <div class="section-label">04 / Background</div>
     <h2 class="section-title">A practical professional path.</h2>
     <p class="section-intro">
       The profile is built around a combination of formal telecommunications education, business ownership, and direct involvement in technology work in the field.
@@ -418,7 +484,7 @@ footer{padding:35px 0}
 
 <section id="work">
   <div class="container">
-    <div class="section-label">04 / Selected Work</div>
+    <div class="section-label">05 / Selected Work</div>
     <h2 class="section-title">Work worth documenting.</h2>
     <p class="section-intro">
       This section represents the main areas of practical work. Specific projects can be added later when they have sufficient documentation and are appropriate to publish.
@@ -455,7 +521,7 @@ footer{padding:35px 0}
 
 <section class="mivision" id="mivision">
   <div class="container mivision-box">
-    <div class="section-label">05 / MIVISION</div>
+    <div class="section-label">06 / MIVISION</div>
     <h2>MIVISION</h2>
     <p>
       MIVISION is a Technology System Integrator built on the belief that technology is more
@@ -473,7 +539,7 @@ footer{padding:35px 0}
 <section id="contact">
   <div class="container contact-grid">
     <div>
-      <div class="section-label">06 / Contact</div>
+      <div class="section-label">07 / Contact</div>
       <h2 class="section-title">Professional contact.</h2>
     </div>
     <div>
