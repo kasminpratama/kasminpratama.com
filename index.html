@@ -1,646 +1,302 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kasmin Pratama | Ibenk Maulana — Personal System Integrator</title>
+  <meta name="description" content="Kasmin Pratama, juga dikenal sebagai Ibenk Maulana, adalah Personal System Integrator berbasis di Baubau, Sulawesi Tenggara, dengan fokus pada CCTV & Surveillance, Network Infrastructure, Starlink & Connectivity, serta Satellite & LEO.">
+  <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
+  <meta name="author" content="Kasmin Pratama">
+  <meta name="theme-color" content="#101b2f">
+  <link rel="canonical" href="https://kasminpratama.com/">
 
-<title>Kasmin Pratama | Ibenk Maulana — Technology Systems Professional</title>
-<meta name="description" content="Kasmin Pratama, also known as Ibenk Maulana, is the owner of MIVISION and a hands-on technology practitioner specializing in surveillance systems, network infrastructure, connectivity, and practical technology implementation.">
-<meta name="author" content="Kasmin Pratama">
-<meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
-<meta name="googlebot" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
-<link rel="canonical" href="https://kasminpratama.com/">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="id_ID">
+  <meta property="og:site_name" content="Kasmin Pratama | Ibenk Maulana">
+  <meta property="og:title" content="Kasmin Pratama | Personal System Integrator">
+  <meta property="og:description" content="Praktisi dan Personal System Integrator pada CCTV & Surveillance, Network Infrastructure, Starlink & Connectivity, serta Satellite & LEO.">
+  <meta property="og:url" content="https://kasminpratama.com/">
+  <meta property="og:image" content="https://kasminpratama.com/assets/kasmin-pratama-mivision-field.jpg">
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="Kasmin Pratama | Ibenk Maulana — Technology Systems Professional">
-<meta property="og:description" content="Professional profile of Kasmin Pratama, also known as Ibenk Maulana. Owner of MIVISION and a hands-on technology practitioner.">
-<meta property="og:url" content="https://kasminpratama.com/">
-<meta property="og:site_name" content="Kasmin Pratama">
-<meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://kasminpratama.com/assets/og-kasmin-pratama.jpg">
-<meta property="og:image:secure_url" content="https://kasminpratama.com/assets/og-kasmin-pratama.jpg">
-<meta property="og:image:type" content="image/jpeg">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="Kasmin Pratama, also known as Ibenk Maulana — Technology Systems Professional">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Kasmin Pratama | Personal System Integrator">
+  <meta name="twitter:description" content="Systems thinking. Field implementation. Connectivity. Technology integration.">
 
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Kasmin Pratama | Ibenk Maulana — Technology Systems Professional">
-<meta name="twitter:description" content="Professional profile of Kasmin Pratama, also known as Ibenk Maulana. Owner of MIVISION and a hands-on technology practitioner.">
-<meta name="twitter:image" content="https://kasminpratama.com/assets/og-kasmin-pratama.jpg">
-<meta name="twitter:image:alt" content="Kasmin Pratama, also known as Ibenk Maulana — Technology Systems Professional">
-
-<meta name="theme-color" content="#2e00a9">
-<link rel="sitemap" type="application/xml" title="Sitemap" href="https://kasminpratama.com/sitemap.xml">
-
-<style>
-:root{
-  --bg:#f5f5f2;
-  --surface:#ffffff;
-  --ink:#111111;
-  --muted:#6c6c68;
-  --line:#deded8;
-  --accent:#2e00a9;
-  --accent-soft:#ede9ff;
-  --dark:#101010;
-  --max:1180px;
-}
-*{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
-body{
-  font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
-  background:var(--bg);color:var(--ink);line-height:1.6;
-}
-a{color:inherit;text-decoration:none}
-.container{max-width:var(--max);margin:auto;padding:0 28px}
-
-/* Navigation */
-nav{
-  position:sticky;top:0;z-index:10;
-  background:rgba(245,245,242,.88);
-  backdrop-filter:blur(14px);
-  border-bottom:1px solid var(--line);
-}
-.nav-inner{
-  height:76px;display:flex;align-items:center;
-  justify-content:space-between;
-}
-.brand{font-weight:800;letter-spacing:-.04em;font-size:21px}
-.brand span{color:var(--accent)}
-.nav-links{display:flex;gap:30px;font-size:13px;color:var(--muted)}
-.nav-links a:hover{color:var(--accent)}
-.menu-btn{
-  display:none;background:none;border:0;font-size:24px;line-height:1;
-  color:var(--ink);cursor:pointer;
-}
-
-/* Hero */
-.hero{
-  min-height:720px;display:flex;align-items:center;
-  border-bottom:1px solid var(--line);
-}
-.hero-grid{
-  width:100%;display:grid;grid-template-columns:1.25fr .75fr;
-  gap:70px;align-items:end;
-}
-.eyebrow{
-  display:flex;align-items:center;gap:10px;
-  color:var(--accent);font-size:12px;font-weight:700;
-  letter-spacing:.12em;text-transform:uppercase;margin-bottom:25px;
-}
-.dot{width:8px;height:8px;border-radius:50%;background:var(--accent)}
-h1{
-  font-size:clamp(60px,9vw,132px);
-  line-height:.86;letter-spacing:-.075em;
-  font-weight:800;max-width:800px;
-}
-.hero h1 em{font-style:normal;color:var(--accent)}
-.hero-copy{
-  margin-top:38px;max-width:610px;font-size:20px;
-  color:var(--muted);line-height:1.65;
-}
-.actions{display:flex;gap:12px;margin-top:38px;flex-wrap:wrap}
-.btn{
-  padding:14px 22px;border:1px solid var(--ink);
-  font-size:13px;font-weight:700;transition:.2s;
-}
-.btn.primary{background:var(--dark);color:#fff}
-.btn:hover{transform:translateY(-2px)}
-.hero-side{border-left:1px solid var(--line);padding:0 0 5px 35px}
-.hero-side p{font-size:13px;color:var(--muted);margin-bottom:24px}
-.side-list{list-style:none}
-.side-list li{
-  border-top:1px solid var(--line);padding:15px 0;
-  font-size:14px;font-weight:600;
-}
-
-/* General sections */
-section{padding:130px 0;border-bottom:1px solid var(--line)}
-.section-label{
-  color:var(--accent);font-size:11px;letter-spacing:.16em;
-  font-weight:800;text-transform:uppercase;margin-bottom:20px;
-}
-.section-title{
-  font-size:clamp(40px,5vw,70px);letter-spacing:-.055em;
-  line-height:.98;max-width:850px;
-}
-.section-intro{
-  margin-top:26px;max-width:680px;font-size:18px;color:var(--muted);
-}
-
-/* About */
-.about-grid{
-  display:grid;grid-template-columns:.7fr 1.3fr;gap:90px;
-}
-.about-text{font-size:24px;line-height:1.55;letter-spacing:-.02em}
-.about-meta{margin-top:40px;display:grid;grid-template-columns:1fr 1fr;gap:25px}
-.meta{border-top:1px solid var(--line);padding-top:14px}
-.meta small{display:block;color:var(--muted);font-size:11px;text-transform:uppercase;letter-spacing:.1em}
-.meta strong{display:block;margin-top:5px;font-size:14px}
-
-/* Expertise */
-.cards{
-  margin-top:65px;display:grid;grid-template-columns:repeat(2,1fr);
-  border-top:1px solid var(--line);border-left:1px solid var(--line);
-}
-.card{
-  min-height:265px;padding:34px;
-  border-right:1px solid var(--line);border-bottom:1px solid var(--line);
-  background:transparent;transition:.25s;
-}
-.card:hover{background:var(--surface)}
-.card-num{font-size:12px;color:var(--accent);font-weight:800}
-.card h3{font-size:28px;letter-spacing:-.04em;margin-top:50px}
-.card p{color:var(--muted);font-size:14px;margin-top:10px;max-width:380px}
-
-/* Certifications */
-.certification-grid{
-  margin-top:65px;display:grid;grid-template-columns:repeat(2,1fr);
-  border-top:1px solid var(--line);border-left:1px solid var(--line);
-}
-.certification{
-  min-height:210px;padding:34px;
-  border-right:1px solid var(--line);border-bottom:1px solid var(--line);
-  background:transparent;transition:.25s;
-}
-.certification:hover{background:var(--surface)}
-.certification h3{font-size:26px;letter-spacing:-.04em;margin-top:36px}
-.certification p{color:var(--muted);font-size:14px;margin-top:10px;max-width:380px}
-.certification-meta{margin-top:22px;color:var(--accent);font-size:12px;font-weight:800}
-
-/* Background */
-.timeline{margin-top:65px}
-.timeline-item{
-  display:grid;grid-template-columns:150px 1fr;
-  padding:28px 0;border-top:1px solid var(--line);
-}
-.timeline-year{font-size:13px;color:var(--accent);font-weight:800}
-.timeline-item h3{font-size:22px;letter-spacing:-.03em}
-.timeline-item p{color:var(--muted);font-size:14px;margin-top:5px}
-
-/* Work */
-.work-list{margin-top:65px}
-.work{
-  display:grid;grid-template-columns:90px 1fr auto;
-  gap:30px;align-items:center;
-  padding:28px 0;border-top:1px solid var(--line);
-}
-.work:last-child{border-bottom:1px solid var(--line)}
-.work-num{color:var(--accent);font-weight:800;font-size:13px}
-.work h3{font-size:26px;letter-spacing:-.04em}
-.work p{color:var(--muted);font-size:14px;margin-top:4px}
-.arrow{font-size:25px;color:var(--accent)}
-
-/* Mivision */
-.mivision{
-  background:var(--dark);color:#fff;
-}
-.mivision-box{
-  min-height:430px;display:flex;flex-direction:column;
-  justify-content:center;align-items:center;text-align:center;
-}
-.mivision .section-label{color:#a895ff}
-.mivision h2{
-  font-size:clamp(58px,9vw,120px);letter-spacing:-.07em;line-height:.85;
-}
-.mivision p{max-width:600px;color:#aaa;margin:30px auto;font-size:17px}
-.mivision .btn{border-color:#555}
-.mivision .btn.primary{background:#fff;color:#111}
-
-/* Contact */
-.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px}
-.contact-links{margin-top:38px}
-.contact-links a{
-  display:block;padding:18px 0;border-top:1px solid var(--line);
-  font-size:16px;font-weight:600;
-}
-.contact-links a:last-child{border-bottom:1px solid var(--line)}
-
-/* Footer */
-footer{padding:35px 0}
-.footer-inner{display:flex;justify-content:space-between;color:var(--muted);font-size:12px}
-
-@media(max-width:800px){
-  .container{padding:0 20px}
-
-  /* Mobile navigation only */
-  .nav-inner{position:relative}
-  .nav-links{
-    display:none;
-    position:absolute;
-    top:76px;left:0;right:0;
-    flex-direction:column;
-    gap:0;
-    padding:10px 20px 18px;
-    background:rgba(245,245,242,.98);
-    backdrop-filter:blur(14px);
-    border-bottom:1px solid var(--line);
-  }
-  nav.nav-open .nav-links{display:flex}
-  .nav-links a{
-    display:block;
-    padding:14px 0;
-    border-top:1px solid var(--line);
-    font-size:14px;
-  }
-  .nav-links a:first-child{border-top:0}
-  .menu-btn{display:block}
-  .menu-btn[aria-expanded="true"]{transform:rotate(45deg)}
-  .hero{min-height:auto;padding:110px 0}
-  .hero-grid,.about-grid,.contact-grid{grid-template-columns:1fr;gap:50px}
-  .hero-side{border-left:0;border-top:1px solid var(--line);padding:30px 0 0}
-  section{padding:90px 0}
-  .cards,.certification-grid{grid-template-columns:1fr}
-  .timeline-item{grid-template-columns:1fr;gap:8px}
-  .work{grid-template-columns:55px 1fr auto;gap:15px}
-  .work h3{font-size:20px}
-  .footer-inner{flex-direction:column;gap:8px}
-}
-</style>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "WebSite",
-      "@id": "https://kasminpratama.com/#website",
-      "url": "https://kasminpratama.com/",
-      "name": "Kasmin Pratama",
-      "description": "Professional website of Kasmin Pratama, also known as Ibenk Maulana.",
-      "inLanguage": "en"
-    },
-    {
-      "@type": "WebPage",
-      "@id": "https://kasminpratama.com/#webpage",
-      "url": "https://kasminpratama.com/",
-      "name": "Kasmin Pratama | Ibenk Maulana — Technology Systems Professional",
-      "description": "Professional profile of Kasmin Pratama, also known as Ibenk Maulana, owner of MIVISION and a hands-on technology practitioner.",
-      "isPartOf": {
-        "@id": "https://kasminpratama.com/#website"
-      },
-      "mainEntity": {
-        "@id": "https://kasminpratama.com/#person"
-      },
-      "inLanguage": "en"
-    },
-    {
-      "@type": "Person",
-      "@id": "https://kasminpratama.com/#person",
-      "name": "Kasmin Pratama",
-      "alternateName": "Ibenk Maulana",
-      "url": "https://kasminpratama.com/",
-      "email": "mailto:kasminpratama.id@gmail.com",
-      "jobTitle": "Owner of MIVISION and Hands-on Technology Practitioner",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Kota Baubau",
-        "addressRegion": "Sulawesi Tenggara",
-        "addressCountry": "ID"
-      },
-      "mainEntityOfPage": {
-        "@id": "https://kasminpratama.com/#webpage"
-      },
-      "sameAs": [
-        "https://www.facebook.com/ahlikameracctv",
-        "https://www.instagram.com/ibenkworld/"
-      ],
-      "knowsAbout": [
-        "CCTV Systems",
-        "Hikvision CCTV Systems",
-        "Dahua CCTV Systems",
-        "Imou Security Cameras",
-        "Ezviz Smart Home Security",
-        "Tiandy Surveillance",
-        "UNV Uniview Systems",
-        "Bardi Smart Home",
-        "Surveillance Systems",
-        "Network Infrastructure",
-        "Starlink Connectivity",
-        "Technology Systems",
-        "Alarm Systems",
-        "Field Implementation"
-      ],
-      "hasCredential": [
-        {"@type": "EducationalOccupationalCredential", "name": "HCSA-HIPC", "credentialCategory": "Professional Certification", "recognizedBy": {"@type": "Organization", "name": "Hikvision"}},
-        {"@type": "EducationalOccupationalCredential", "name": "HCSA-HNET", "credentialCategory": "Professional Certification", "recognizedBy": {"@type": "Organization", "name": "Hikvision"}},
-        {"@type": "EducationalOccupationalCredential", "name": "HCSA-HACE", "credentialCategory": "Professional Certification", "recognizedBy": {"@type": "Organization", "name": "Hikvision"}},
-        {"@type": "EducationalOccupationalCredential", "name": "HCSA-Maintenance", "credentialCategory": "Professional Certification", "recognizedBy": {"@type": "Organization", "name": "Hikvision"}},
-        {"@type": "EducationalOccupationalCredential", "name": "HCSA-Networking", "credentialCategory": "Professional Certification", "recognizedBy": {"@type": "Organization", "name": "Hikvision"}}
-      ],
-      "worksFor": {
-        "@type": "Organization",
-        "name": "MIVISION",
-        "url": "https://mivision.id"
-      }
+  <style>
+    :root{
+      --ink:#101827;
+      --muted:#607087;
+      --line:rgba(20,40,70,.11);
+      --paper:#f7f8fa;
+      --white:#fff;
+      --blue:#2158b7;
+      --blue2:#2d78df;
+      --navy:#111d32;
+      --purple:#2e00a9;
+      --cyan:#2ac3fd;
+      --shadow:0 20px 55px rgba(20,35,60,.12);
     }
-  ]
-}
-</script>
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;background:var(--paper);color:var(--ink);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+    a{color:inherit;text-decoration:none}
+    .shell{width:min(1480px,100%);margin:auto;background:#fff;min-height:100vh;overflow:hidden}
+    .nav{height:70px;display:flex;align-items:center;justify-content:space-between;padding:0 5.6%;border-bottom:1px solid var(--line);background:rgba(255,255,255,.96)}
+    .brand{font-size:14px;letter-spacing:-.02em;white-space:nowrap}
+    .brand strong{font-weight:800}.brand span{color:#6f7a89;margin-left:8px}
+    .navlinks{display:flex;gap:34px;align-items:center;font-size:14px;color:#485466}
+    .navlinks a{transition:.2s}.navlinks a:hover{color:var(--blue)}
+    .contact{padding:13px 25px;border-radius:999px;background:linear-gradient(135deg,#244b8f,#2169c8);color:#fff;font-weight:700;box-shadow:0 8px 20px rgba(33,88,183,.22)}
+    .hero{position:relative;min-height:730px;isolation:isolate;background:#eaf0f6}
+    .hero-image{position:absolute;inset:0 0 0 39%;background:url('kasmin-pratama-mivision-field.jpg') center center/cover no-repeat;z-index:-2}
+    .hero-image:before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#f7f8fa 0%,rgba(247,248,250,.97) 4%,rgba(247,248,250,.62) 17%,rgba(247,248,250,.08) 42%,rgba(12,30,57,.06) 100%)}
+    .hero-image:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(239,246,253,.1),rgba(11,25,44,.06))}
+    .hero-content{padding:62px 5.6% 92px;max-width:57%;position:relative;z-index:2}
+    .eyebrow{font-size:11px;letter-spacing:3px;font-weight:800;color:#526278;margin-bottom:18px}
+    h1{font-size:clamp(62px,7vw,112px);line-height:.82;letter-spacing:-.075em;margin:0 0 22px;font-weight:850;max-width:670px}
+    h1 span{display:block;background:linear-gradient(105deg,#18365e,#2d78df);-webkit-background-clip:text;background-clip:text;color:transparent}
+    .lead{max-width:590px;font-size:18px;line-height:1.58;color:#566477;margin:0 0 32px}
+    .domains{display:grid;grid-template-columns:repeat(4,1fr);gap:0;max-width:850px;margin:28px 0 30px;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+    .domain{padding:18px 14px 17px 0;border-right:1px solid var(--line);min-height:124px}
+    .domain:not(:first-child){padding-left:18px}.domain:last-child{border-right:0}
+    .domain b{display:block;font-size:14px;line-height:1.18;margin:9px 0 8px}.domain small{font-size:12px;line-height:1.45;color:#657389}
+    .icon{width:28px;height:28px;color:#2160bd}
+    .actions{display:flex;gap:14px;flex-wrap:wrap}
+    .btn{padding:14px 23px;border-radius:999px;font-weight:750;font-size:14px;border:1px solid #b8c5d7;display:inline-flex;gap:12px;align-items:center}
+    .btn.primary{background:#205dbb;color:#fff;border-color:#205dbb;box-shadow:0 12px 25px rgba(32,93,187,.18)}
+    .hero-note{position:absolute;right:5.6%;bottom:30px;width:min(390px,31vw);padding:23px 28px;background:rgba(15,27,48,.9);color:#fff;border:1px solid rgba(255,255,255,.15);border-radius:24px;backdrop-filter:blur(12px);display:flex;justify-content:space-between;gap:20px;z-index:3}
+    .hero-note .small{font-size:12px;line-height:1.55;color:#aeb9ca}.hero-note b{display:block;font-size:17px;margin-bottom:3px}.hero-note .identity{font-size:12px;text-align:right;font-weight:750;line-height:1.5}
+    .quote{position:absolute;right:8%;top:55px;z-index:3;color:white;max-width:270px;font-family:Georgia,serif;font-style:italic;font-size:28px;line-height:1.2;text-align:right;opacity:.93}
+    .stats{display:grid;grid-template-columns:1fr 1fr 1fr 1fr 2fr;border-top:1px solid var(--line);background:#fbfcfd}
+    .stat{padding:24px 5.6%;border-right:1px solid var(--line);white-space:nowrap}.stat:nth-child(2),.stat:nth-child(3),.stat:nth-child(4){padding-left:24px;padding-right:24px}.stat:last-child{border:0;white-space:normal}
+    .stat strong{font-size:29px;display:block;letter-spacing:-.04em}.stat span{font-size:13px;color:#657389}
+    .stat.quote-stat{font-size:15px;color:#526278;line-height:1.35}
+    .section{padding:90px 5.6%;border-top:1px solid var(--line)}
+    .section-kicker{font-size:11px;letter-spacing:2.8px;font-weight:800;color:#617189;margin-bottom:15px}
+    h2{font-size:clamp(36px,4.5vw,68px);line-height:.95;letter-spacing:-.055em;margin:0 0 24px;max-width:920px}
+    .section-intro{font-size:18px;line-height:1.65;color:#5d6b7d;max-width:770px}
+    .practice-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:45px}
+    .card{background:#fff;border:1px solid var(--line);border-radius:20px;padding:28px;min-height:255px;transition:.2s}.card:hover{transform:translateY(-3px);box-shadow:var(--shadow)}
+    .card-num{font-size:12px;color:#758399;font-weight:800;letter-spacing:2px}.card h3{font-size:22px;letter-spacing:-.03em;margin:42px 0 10px}.card p{font-size:14px;line-height:1.6;color:#657389;margin:0}
+    .ai-layer{margin-top:24px;padding:28px 32px;border-radius:20px;background:linear-gradient(110deg,#111c31,#233f72);color:#fff;display:flex;justify-content:space-between;gap:30px;align-items:center}
+    .ai-layer h3{margin:0;font-size:22px}.ai-layer p{margin:7px 0 0;color:#bfcce0;line-height:1.55;max-width:720px}
+    .ecosystem{background:#f1f5fa}.eco-grid{display:grid;grid-template-columns:1.25fr 1fr 1fr 1fr;gap:16px;margin-top:45px}
+    .eco-card{background:#fff;border:1px solid var(--line);padding:26px;border-radius:20px;min-height:210px}.eco-card.primary{background:#111d32;color:#fff}.eco-card h3{font-size:20px;margin:48px 0 10px}.eco-card p{font-size:14px;line-height:1.55;color:#68768a}.eco-card.primary p{color:#c4cede}
+    .eco-link{font-size:13px;font-weight:800;color:#2766bd}.eco-card.primary .eco-link{color:#83cfff}
+    .authority{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start}.authority-list{border-top:1px solid var(--line)}.authority-item{padding:20px 0;border-bottom:1px solid var(--line);font-size:17px;font-weight:700}.authority-item span{float:right;color:#758399;font-size:13px;font-weight:500}
+    .contact-band{padding:75px 5.6%;background:#111d32;color:#fff}.contact-band h2{max-width:800px}.contact-band p{color:#b7c2d4;max-width:720px;line-height:1.7}
+    .contact-links{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}.social{padding:13px 17px;border:1px solid rgba(255,255,255,.18);border-radius:12px;color:#fff;font-size:14px}
+    footer{padding:30px 5.6%;background:#0d1627;color:#8593a8;font-size:13px;display:flex;justify-content:space-between;gap:20px}
+    @media(max-width:1000px){
+      .navlinks{display:none}.hero{min-height:auto;padding-bottom:290px}.hero-image{left:0;inset:38% 0 0;background-position:60% center}.hero-image:before{background:linear-gradient(180deg,#f7f8fa 0%,rgba(247,248,250,.96) 24%,rgba(247,248,250,.22) 56%,rgba(12,30,57,.08))}
+      .hero-content{max-width:100%;padding-bottom:20px}.domains{grid-template-columns:repeat(2,1fr);max-width:600px}.domain:nth-child(2){border-right:0}.domain:nth-child(-n+2){border-bottom:1px solid var(--line)}.quote{display:none}.hero-note{width:calc(100% - 11.2%);right:5.6%;bottom:25px}.stats{grid-template-columns:1fr 1fr}.stat{padding:22px 5.6%!important;border-bottom:1px solid var(--line)}.stat.quote-stat{grid-column:span 2}.practice-grid,.eco-grid{grid-template-columns:1fr 1fr}.authority{grid-template-columns:1fr;gap:40px}
+    }
+    @media(max-width:600px){
+      .nav{padding:0 22px}.brand span{display:none}.contact{padding:11px 17px}.hero-content{padding:45px 22px}.hero{padding-bottom:300px}.eyebrow{letter-spacing:2px;font-size:9px}h1{font-size:58px}.lead{font-size:16px}.domains{grid-template-columns:1fr 1fr}.domain{min-height:120px}.domain:nth-child(odd){padding-left:0}.hero-note{left:22px;right:22px;width:auto;padding:18px}.hero-note b{font-size:15px}.stats{display:none}.section,.contact-band{padding:65px 22px}.practice-grid,.eco-grid{grid-template-columns:1fr}.ai-layer{display:block;padding:25px}.authority-item span{display:block;float:none;margin-top:7px}footer{padding:25px 22px;display:block}.social{font-size:12px}
+    }
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@graph":[
+      {
+        "@type":"WebSite",
+        "@id":"https://kasminpratama.com/#website",
+        "url":"https://kasminpratama.com/",
+        "name":"Kasmin Pratama | Ibenk Maulana",
+        "inLanguage":"id-ID"
+      },
+      {
+        "@type":"Person",
+        "@id":"https://kasminpratama.com/#person",
+        "name":"Kasmin Pratama",
+        "alternateName":"Ibenk Maulana",
+        "url":"https://kasminpratama.com/",
+        "jobTitle":"Personal System Integrator",
+        "description":"Praktisi teknologi dan Personal System Integrator dengan fokus pada CCTV & Surveillance, Network Infrastructure, Starlink & Connectivity, serta Satellite & LEO.",
+        "sameAs":[
+          "https://id.linkedin.com/in/kasmin-pratama",
+          "https://www.instagram.com/mivision.id/",
+          "https://www.facebook.com/mivision.id/"
+        ],
+        "worksFor":{"@id":"https://mivision.id/#organization"},
+        "homeLocation":{
+          "@type":"Place",
+          "name":"Baubau, Sulawesi Tenggara, Indonesia"
+        }
+      },
+      {
+        "@type":"Organization",
+        "@id":"https://mivision.id/#organization",
+        "name":"MIVISION",
+        "url":"https://mivision.id/",
+        "description":"Technology and systems integration ecosystem.",
+        "sameAs":[
+          "https://www.instagram.com/mivision.id/",
+          "https://www.facebook.com/mivision.id/"
+        ]
+      },
+      {
+        "@type":"WebPage",
+        "@id":"https://kasminpratama.com/#webpage",
+        "url":"https://kasminpratama.com/",
+        "name":"Kasmin Pratama | Personal System Integrator",
+        "isPartOf":{"@id":"https://kasminpratama.com/#website"},
+        "about":{"@id":"https://kasminpratama.com/#person"},
+        "inLanguage":"id-ID"
+      }
+    ]
+  }
+  </script>
 </head>
 
 <body>
+  <main class="shell">
+    <header class="nav">
+      <a class="brand" href="#top"><strong>KASMIN PRATAMA</strong><span>| IBENK MAULANA</span></a>
+      <nav class="navlinks" aria-label="Navigasi utama">
+        <a href="#about">About</a>
+        <a href="#practice">Practice</a>
+        <a href="#perspective">Perspective</a>
+        <a href="#ecosystem">Ecosystem</a>
+      </nav>
+      <a class="contact" href="#contact">Contact&nbsp; →</a>
+    </header>
 
-<nav aria-label="Primary navigation">
-  <div class="container nav-inner">
-    <a href="#home" class="brand">KASMIN<span>.</span></a>
-    <div class="nav-links" id="mobile-navigation">
-      <a href="#about">About</a>
-      <a href="#expertise">Expertise</a>
-      <a href="#certifications">Certifications</a>
-      <a href="#background">Background</a>
-      <a href="#work">Selected Work</a>
-      <a href="#mivision">MIVISION</a>
-      <a href="#contact">Contact</a>
-    </div>
-    <button class="menu-btn" type="button" aria-label="Open navigation menu"
-      aria-expanded="false" aria-controls="mobile-navigation">+</button>
-  </div>
-</nav>
+    <section class="hero" id="top">
+      <div class="hero-image" aria-label="Kasmin Pratama di lingkungan kerja lapangan MIVISION"></div>
+      <div class="quote">“Technology works better when it solves real problems.”</div>
 
-<main id="main-content">
-<section class="hero" id="home" aria-labelledby="page-title">
-  <div class="container hero-grid">
-    <div>
-      <div class="eyebrow"><span class="dot"></span> Professional Profile</div>
-      <h1 id="page-title">KASMIN<br><em>PRATAMA</em></h1>
-      <p class="hero-copy">
-        Also known as Ibenk Maulana. Owner of MIVISION and a hands-on technology practitioner
-        working with surveillance systems, network infrastructure, connectivity, and practical implementation.
-      </p>
-      <div class="actions">
-        <a href="#about" class="btn primary">VIEW PROFILE ↓</a>
-        <a href="#mivision" class="btn">MIVISION →</a>
-      </div>
-    </div>
+      <div class="hero-content">
+        <div class="eyebrow">KASMIN PRATAMA · ALSO KNOWN AS IBENK MAULANA</div>
+        <h1>Personal <span>System</span> Integrator.</h1>
+        <p class="lead">Seorang praktisi teknologi yang bekerja pada pertemuan antara surveillance, network infrastructure, connectivity, dan sistem teknologi yang terus berkembang.</p>
 
-    <aside class="hero-side">
-      <p>Professional focus</p>
-      <ul class="side-list">
-        <li><a href="/cctv-surveillance/">CCTV &amp; Surveillance Systems</a></li>
-        <li><a href="/network-infrastructure/">Network Infrastructure</a></li>
-        <li><a href="/starlink-connectivity/">Starlink &amp; Internet Connectivity</a></li>
-        <li>Hands-on Implementation</li>
-      </ul>
-    </aside>
-  </div>
-</section>
-
-<section id="about">
-  <div class="container about-grid">
-    <div>
-      <div class="section-label">01 / About</div>
-      <h2 class="section-title">Technology, business, and practical field work.</h2>
-    </div>
-    <div>
-      <p class="about-text">
-        Kasmin Pratama, known publicly as Ibenk Maulana, is the owner of MIVISION and remains
-        directly involved in practical technology work. His professional background combines
-        telecommunications education, business ownership, and hands-on field implementation.
-      </p>
-
-      <div class="about-meta">
-        <div class="meta">
-          <small>Education</small>
-          <strong>Diploma III Teknik Telekomunikasi</strong>
+        <div class="domains" aria-label="Area praktik utama">
+          <div class="domain">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="7" width="13" height="10" rx="2"/><path d="m16 10 5-3v10l-5-3"/></svg>
+            <b>CCTV &amp;<br>Surveillance</b><small>Security systems for real-world environments</small>
+          </div>
+          <div class="domain">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="5" cy="5" r="2"/><circle cx="19" cy="5" r="2"/><circle cx="12" cy="19" r="2"/><path d="M6.7 6.2 10.4 17M17.3 6.2 13.6 17M7 5h10"/></svg>
+            <b>Network<br>Infrastructure</b><small>Connected systems and reliable infrastructure</small>
+          </div>
+          <div class="domain">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 14a8 8 0 0 1 16 0"/><path d="M8 14a4 4 0 0 1 8 0"/><path d="M12 18v.01"/><path d="M3 21h18"/></svg>
+            <b>Starlink &amp;<br>Connectivity</b><small>Real-world access beyond conventional limits</small>
+          </div>
+          <div class="domain">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9 7 7M17 17l2.1 2.1M19.1 4.9 17 7M7 17l-2.1 2.1"/></svg>
+            <b>Satellite &amp;<br>LEO</b><small>Emerging perspectives in connectivity</small>
+          </div>
         </div>
-        <div class="meta">
-          <small>Professional Role</small>
-          <strong>Owner of MIVISION · Hands-on Practitioner</strong>
+
+        <div class="actions">
+          <a class="btn primary" href="#about">Explore My Work →</a>
+          <a class="btn" href="#ecosystem">View Ecosystem →</a>
         </div>
       </div>
-    </div>
-  </div>
-</section>
 
-<section id="expertise">
-  <div class="container">
-    <div class="section-label">02 / Expertise</div>
-    <h2 class="section-title">Areas of professional work.</h2>
-    <p class="section-intro">
-      Professional focus centered on practical technology systems, direct field implementation, surveillance infrastructure, network connectivity, and the integration of technology solutions.
-    </p>
+      <div class="hero-note">
+        <div><b>Field Experience</b><b>Real Solutions</b></div>
+        <div class="identity">KASMIN PRATAMA<br>IBENK MAULANA</div>
+      </div>
+    </section>
 
-    <div class="cards">
-      <article class="card">
-        <div class="card-num">01</div>
-        <h3>CCTV & Surveillance</h3>
-        <p>Practical experience in the installation, configuration, maintenance, and implementation of CCTV and surveillance systems.</p>
-      </article>
-      <article class="card">
-        <div class="card-num">02</div>
-        <h3>Network Infrastructure</h3>
-        <p>Hands-on work involving local network infrastructure, equipment configuration, connectivity, and supporting network systems.</p>
-      </article>
-      <article class="card">
-        <div class="card-num">03</div>
-        <h3>Starlink & Internet Connectivity</h3>
-        <p>Practical implementation of internet connectivity solutions, including Starlink deployment and supporting network integration..</p>
-      </article>
-      <article class="card">
-        <div class="card-num">04</div>
-        <h3>Hands-on Technology Implementation</h3>
-        <p>Direct involvement in the installation, configuration, troubleshooting, and implementation of practical technology systems.</p>
-      </article>
-    </div>
-  </div>
-</section>
+    <section class="stats" aria-label="Ringkasan posisi profesional">
+      <div class="stat"><strong>4</strong><span>Core Practice Areas</span></div>
+      <div class="stat"><strong>1</strong><span>Personal Authority</span></div>
+      <div class="stat"><strong>1</strong><span>Technology Ecosystem</span></div>
+      <div class="stat"><strong>∞</strong><span>Systems Perspective</span></div>
+      <div class="stat quote-stat">“Menghubungkan teknologi dengan kebutuhan nyata, untuk sistem yang lebih berguna.”</div>
+    </section>
 
-<section id="certifications">
-  <div class="container">
-    <div class="section-label">03 / Professional Certifications</div>
-    <h2 class="section-title">Professional training and verified technical credentials.</h2>
-    <p class="section-intro">
-      Professional certifications from Hikvision covering surveillance technology, networking, maintenance, and related technical systems. The certifications displayed below are shown with a stated validity through June 2028.
-    </p>
+    <section class="section" id="about">
+      <div class="section-kicker">01 / ABOUT</div>
+      <h2>Teknologi bukan sekadar perangkat. Nilainya muncul ketika seluruh sistem bekerja bersama.</h2>
+      <p class="section-intro">Kasmin Pratama atau Ibenk Maulana adalah personal authority dan praktisi di balik sebuah ekosistem teknologi yang berangkat dari pekerjaan nyata di lapangan. Perannya bukan sekadar menjual perangkat, tetapi memahami kebutuhan, merancang integrasi, dan menghubungkan komponen teknologi menjadi solusi yang dapat digunakan.</p>
+    </section>
 
-    <div class="certification-grid">
-      <article class="certification">
-        <div class="card-num">01</div>
-        <h3>HCSA-HIPC</h3>
-        <p>Hikvision professional certification in security technology training.</p>
-        <div class="certification-meta">Hikvision Security Certification · Valid until June 2028</div>
-      </article>
-      <article class="certification">
-        <div class="card-num">02</div>
-        <h3>HCSA-HNET</h3>
-        <p>Hikvision professional certification in network-related technology training.</p>
-        <div class="certification-meta">Hikvision Security Certification · Valid until June 2028</div>
-      </article>
-      <article class="certification">
-        <div class="card-num">03</div>
-        <h3>HCSA-HACE</h3>
-        <p>Hikvision professional certification in technical security systems training.</p>
-        <div class="certification-meta">Hikvision Security Certification · Valid until June 2028</div>
-      </article>
-      <article class="certification">
-        <div class="card-num">04</div>
-        <h3>HCSA-Maintenance</h3>
-        <p>Hikvision professional certification focused on maintenance training.</p>
-        <div class="certification-meta">Hikvision Security Certification · Valid until June 2028</div>
-      </article>
-      <article class="certification">
-        <div class="card-num">05</div>
-        <h3>HCSA-Networking</h3>
-        <p>Hikvision professional certification focused on networking training.</p>
-        <div class="certification-meta">Hikvision Security Certification · Valid until June 2028</div>
-      </article>
-    </div>
-  </div>
-</section>
+    <section class="section" id="practice">
+      <div class="section-kicker">02 / PRACTICE AREAS</div>
+      <h2>Empat domain. Satu cara berpikir: system integration.</h2>
+      <p class="section-intro">Setiap domain memiliki teknologi, perangkat, dan tantangannya sendiri. Nilai integrator berada pada kemampuan melihat hubungan antarsistem, bukan hanya setiap produk secara terpisah.</p>
 
-<section id="background">
-  <div class="container">
-    <div class="section-label">04 / Background</div>
-    <h2 class="section-title">A practical professional path.</h2>
-    <p class="section-intro">
-      The profile is built around a combination of formal telecommunications education, business ownership, and direct involvement in technology work in the field.
-    </p>
+      <div class="practice-grid">
+        <article class="card"><div class="card-num">01</div><h3>CCTV &amp; Surveillance</h3><p>Surveillance sebagai sistem: kamera, perekaman, jaringan, penyimpanan, pemantauan, dan kebutuhan operasional.</p></article>
+        <article class="card"><div class="card-num">02</div><h3>Network Infrastructure</h3><p>Fondasi konektivitas untuk perangkat, pengguna, layanan, dan sistem yang saling bergantung.</p></article>
+        <article class="card"><div class="card-num">03</div><h3>Starlink &amp; Connectivity</h3><p>Menerapkan konektivitas untuk kondisi nyata, terutama ketika akses konvensional memiliki keterbatasan.</p></article>
+        <article class="card"><div class="card-num">04</div><h3>Satellite &amp; LEO</h3><p>Memahami perkembangan konektivitas satelit sebagai bagian dari lanskap teknologi masa depan.</p></article>
+      </div>
 
-    <div class="timeline">
-      <div class="timeline-item">
-        <div class="timeline-year">EDUCATION</div>
+      <div class="ai-layer">
+        <div><h3>Artificial Intelligence sebagai intelligence layer</h3><p>AI tidak diposisikan sebagai domain terpisah. Dalam konteks ekosistem ini, AI merupakan lapisan kecerdasan yang dapat memperkuat surveillance, network, connectivity, dan sistem teknologi masa depan.</p></div>
+      </div>
+    </section>
+
+    <section class="section" id="perspective">
+      <div class="section-kicker">03 / FIELD EXPERIENCE</div>
+      <div class="authority">
         <div>
-          <h3>Diploma III Teknik Telekomunikasi</h3>
-          <p>Formal educational background in telecommunications.</p>
+          <h2>Authority dibangun dari praktik, bukan dari tampilan.</h2>
+          <p class="section-intro">Bagian ini memosisikan pengalaman lapangan sebagai dasar kredibilitas. Website ini bukan blog pribadi dan bukan katalog produk. Ia adalah representasi profesional dari cara berpikir, bidang praktik, dan ekosistem yang dibangun.</p>
+        </div>
+        <div class="authority-list">
+          <div class="authority-item">System Thinking <span>Memahami hubungan antarkomponen</span></div>
+          <div class="authority-item">Field Implementation <span>Menerjemahkan kebutuhan menjadi sistem nyata</span></div>
+          <div class="authority-item">Technology Integration <span>Menghubungkan teknologi menjadi solusi</span></div>
+          <div class="authority-item">Regional Perspective <span>Berbasis di Baubau, Sulawesi Tenggara, Indonesia</span></div>
         </div>
       </div>
-      <div class="timeline-item">
-        <div class="timeline-year">FIELD WORK</div>
-        <div>
-          <h3>Hands-on Technology Practice</h3>
-          <p>Direct involvement in practical technology work and implementation in the field.</p>
-        </div>
-      </div>
-      <div class="timeline-item">
-        <div class="timeline-year">MIVISION</div>
-        <div>
-          <h3>Owner & Technology Practitioner</h3>
-          <p>Building and operating MIVISION while remaining involved in practical technical work.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+    </section>
 
-<section id="work">
-  <div class="container">
-    <div class="section-label">05 / Selected Work</div>
-    <h2 class="section-title">Work worth documenting.</h2>
-    <p class="section-intro">
-      This section represents the main areas of practical work. Specific projects can be added later when they have sufficient documentation and are appropriate to publish.
-    </p>
+    <section class="section ecosystem" id="ecosystem">
+      <div class="section-kicker">04 / ECOSYSTEM</div>
+      <h2>Satu personal authority. Beberapa entitas dengan fungsi yang berbeda.</h2>
+      <p class="section-intro">Hubungan ekosistem dibuat secara jelas agar setiap platform memiliki peran sendiri dan tidak saling menumpuk.</p>
 
-    <div class="work-list">
-      <div class="work">
-        <div class="work-num">01</div>
-        <div>
-          <h3>Surveillance Systems</h3>
-          <p>Practical work involving CCTV and surveillance system implementation.</p>
-        </div>
-        <div class="arrow">↗</div>
+      <div class="eco-grid">
+        <article class="eco-card primary">
+          <div class="card-num">PERSONAL AUTHORITY</div>
+          <h3>Kasmin Pratama<br>| Ibenk Maulana</h3>
+          <p>Personal System Integrator. Pusat perspektif, pengalaman, dan authority profesional.</p>
+        </article>
+        <article class="eco-card">
+          <div class="card-num">BUSINESS ECOSYSTEM</div>
+          <h3>MIVISION</h3>
+          <p>Entitas dan ekosistem implementasi teknologi, sistem, produk, dan layanan.</p>
+          <a class="eco-link" href="https://mivision.id/" target="_blank" rel="noopener">Visit mivision.id →</a>
+        </article>
+        <article class="eco-card">
+          <div class="card-num">KNOWLEDGE ECOSYSTEM</div>
+          <h3>Academy MIVISION</h3>
+          <p>Ruang pengembangan pengetahuan dan pembelajaran dalam ekosistem MIVISION.</p>
+        </article>
+        <article class="eco-card">
+          <div class="card-num">SPECIALIZED PLATFORM</div>
+          <h3>CCTVBaubau.net</h3>
+          <p>Platform spesialis yang berfokus pada kebutuhan dan konteks CCTV &amp; surveillance.</p>
+        </article>
       </div>
-      <div class="work">
-        <div class="work-num">02</div>
-        <div>
-          <h3>Network Infrastructure</h3>
-          <p>Practical work involving connectivity and supporting network infrastructure.</p>
-        </div>
-        <div class="arrow">↗</div>
-      </div>
-      <div class="work">
-        <div class="work-num">03</div>
-        <div>
-          <h3>Technology Implementation</h3>
-          <p>Direct implementation and integration of practical technology systems.</p>
-        </div>
-        <div class="arrow">↗</div>
-      </div>
-    </div>
-  </div>
-</section>
+    </section>
 
-<section class="mivision" id="mivision">
-  <div class="container mivision-box">
-    <div class="section-label">06 / MIVISION</div>
-    <h2>MIVISION</h2>
-    <p>
-      MIVISION is a Technology System Integrator built on the belief that technology is more
-      than just a device. Technology connects, protects, and helps improve everyday life.
-      Through practical technology solutions, MIVISION integrates systems that support
-      smarter connections, safer environments, and real benefits.
-    </p>
-    <p style="margin-top:0;font-weight:700;letter-spacing:.02em;color:#fff;">
-      Smart Connection, Safe Protection
-    </p>
-    <a href="https://mivision.id" class="btn primary" target="_blank" rel="noopener">VISIT MIVISION ↗</a>
-  </div>
-</section>
-
-<section id="contact">
-  <div class="container contact-grid">
-    <div>
-      <div class="section-label">07 / Contact</div>
-      <h2 class="section-title">Professional contact.</h2>
-    </div>
-    <div>
-      <p class="section-intro">
-        For professional inquiries or to connect with Kasmin Pratama, also known publicly and online as Ibenk Maulana.
-      </p>
+    <section class="contact-band" id="contact">
+      <div class="section-kicker" style="color:#8fa2be">05 / CONNECTION</div>
+      <h2>Terhubung dengan ekosistem yang tepat.</h2>
+      <p>Untuk melihat aktivitas dan ekosistem profesional yang terkait, gunakan kanal resmi berikut.</p>
       <div class="contact-links">
-        <a href="mailto:kasminpratama.id@gmail.com">kasminpratama.id@gmail.com ↗</a>
-        <a href="https://www.facebook.com/ahlikameracctv" target="_blank" rel="noopener">Facebook · ahlikameracctv ↗</a>
-        <a href="https://www.instagram.com/ibenkworld/" target="_blank" rel="noopener">Instagram · @ibenkworld ↗</a>
-        <a href="https://mivision.id" target="_blank" rel="noopener">MIVISION ↗</a>
+        <a class="social" href="https://mivision.id/" target="_blank" rel="noopener">MIVISION Website</a>
+        <a class="social" href="https://www.instagram.com/mivision.id/" target="_blank" rel="noopener">Instagram MIVISION</a>
+        <a class="social" href="https://www.facebook.com/mivision.id/" target="_blank" rel="noopener">Facebook MIVISION</a>
+        <a class="social" href="https://id.linkedin.com/in/kasmin-pratama" target="_blank" rel="noopener">LinkedIn Kasmin Pratama</a>
       </div>
-    </div>
-  </div>
-</section>
-</main>
+    </section>
 
-<footer>
-  <div class="container footer-inner">
-    <div>© 2026 Kasmin Pratama</div>
-    <div>Professional Profile · Technology Systems</div>
-  </div>
-</footer>
-
-
-<script>
-(() => {
-  const nav = document.querySelector('nav[aria-label="Primary navigation"]');
-  const menuButton = document.querySelector('.menu-btn');
-  const navLinks = document.getElementById('mobile-navigation');
-
-  if (!nav || !menuButton || !navLinks) return;
-
-  const closeMenu = () => {
-    nav.classList.remove('nav-open');
-    menuButton.setAttribute('aria-expanded', 'false');
-    menuButton.setAttribute('aria-label', 'Open navigation menu');
-  };
-
-  menuButton.addEventListener('click', () => {
-    const isOpen = nav.classList.toggle('nav-open');
-    menuButton.setAttribute('aria-expanded', String(isOpen));
-    menuButton.setAttribute(
-      'aria-label',
-      isOpen ? 'Close navigation menu' : 'Open navigation menu'
-    );
-  });
-
-  navLinks.addEventListener('click', (event) => {
-    if (event.target.closest('a')) closeMenu();
-  });
-
-  document.addEventListener('keydown', (event) => {
-    if (event.key === 'Escape') closeMenu();
-  });
-
-  window.addEventListener('resize', () => {
-    if (window.innerWidth > 800) closeMenu();
-  });
-})();
-</script>
-
+    <footer>
+      <div>© 2026 Kasmin Pratama / Ibenk Maulana</div>
+      <div>Personal System Integrator · Baubau, Sulawesi Tenggara, Indonesia</div>
+    </footer>
+  </main>
 </body>
 </html>
