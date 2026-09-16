@@ -27,38 +27,61 @@
   <meta name="twitter:description" content="Professional focus on practical Starlink deployment, internet connectivity, network integration, and supporting infrastructure.">
 
   <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@graph":[
-      {
-        "@type":"WebPage",
-        "@id":"https://kasminpratama.com/starlink-connectivity/#webpage",
-        "url":"https://kasminpratama.com/starlink-connectivity/",
-        "name":"Starlink & Internet Connectivity | Kasmin Pratama",
-        "description":"Kasmin Pratama's professional focus on practical Starlink deployment, internet connectivity, network integration, and supporting infrastructure.",
-        "inLanguage":"en",
-        "isPartOf":{"@id":"https://kasminpratama.com/#website"},
-        "about":{"@id":"https://schema.org/Thing"},
-        "mainEntity":{"@id":"https://kasminpratama.com/starlink-connectivity/#topic"},
-        "breadcrumb":{"@id":"https://kasminpratama.com/starlink-connectivity/#breadcrumb"}
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://kasminpratama.com/starlink-connectivity/#webpage",
+      "url": "https://kasminpratama.com/starlink-connectivity/",
+      "name": "Starlink & Internet Connectivity | Kasmin Pratama",
+      "description": "Kasmin Pratama's professional focus on practical Starlink deployment, internet connectivity, network integration, and supporting infrastructure.",
+      "inLanguage": "en",
+      "isPartOf": {
+        "@id": "https://kasminpratama.com/#website"
       },
-      {
-        "@type":"Thing",
-        "@id":"https://kasminpratama.com/starlink-connectivity/#topic",
-        "name":"Starlink & Internet Connectivity",
-        "description":"Practical deployment and integration of Starlink internet connectivity with local network infrastructure."
+      "about": {
+        "@id": "https://kasminpratama.com/starlink-connectivity/#service"
       },
-      {
-        "@type":"BreadcrumbList",
-        "@id":"https://kasminpratama.com/starlink-connectivity/#breadcrumb",
-        "itemListElement":[
-          {"@type":"ListItem","position":1,"name":"Home","item":"https://kasminpratama.com/"},
-          {"@type":"ListItem","position":2,"name":"Starlink & Internet Connectivity","item":"https://kasminpratama.com/starlink-connectivity/"}
-        ]
+      "mainEntity": {
+        "@id": "https://kasminpratama.com/starlink-connectivity/#service"
+      },
+      "breadcrumb": {
+        "@id": "https://kasminpratama.com/starlink-connectivity/#breadcrumb"
       }
-    ]
-  }
-  </script>
+    },
+    {
+      "@type": "Service",
+      "@id": "https://kasminpratama.com/starlink-connectivity/#service",
+      "name": "Starlink & Internet Connectivity",
+      "serviceType": "Starlink and internet connectivity implementation",
+      "description": "Practical Starlink deployment and integration of internet connectivity with local network infrastructure.",
+      "provider": {
+        "@id": "https://kasminpratama.com/#person"
+      },
+      "url": "https://kasminpratama.com/starlink-connectivity/"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://kasminpratama.com/starlink-connectivity/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://kasminpratama.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Starlink & Internet Connectivity",
+          "item": "https://kasminpratama.com/starlink-connectivity/"
+        }
+      ]
+    }
+  ]
+}
+</script>
 
   <style>
     :root {
@@ -408,6 +431,9 @@
       }
 
 
+
+    @media (max-width: 900px) {
+
       .intro-grid,
       .two-col {
         grid-template-columns: 1fr;
@@ -642,6 +668,5 @@
   });
 })();
 </script>
-
 </body>
 </html>
