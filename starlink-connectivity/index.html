@@ -383,10 +383,13 @@
 
 <body>
   <header>
-    <div class="container nav">
-      <a class="brand" href="/" aria-label="Kasmin Pratama Home">KASMIN<span>.</span></a>
+  <div class="container nav">
+    <a class="brand" href="/" aria-label="Kasmin Pratama Home">
+      KASMIN<span>.</span>
+    </a>
 
-      <nav aria-label="Primary navigation">
+    <nav aria-label="Primary navigation">
+      <div class="mobile-nav-links" id="mobile-navigation">
         <a href="/#about">About</a>
         <a href="/#expertise" aria-current="page">Expertise</a>
         <a href="/#certifications">Certifications</a>
@@ -394,9 +397,18 @@
         <a href="/#selected-work">Selected Work</a>
         <a href="/#mivision">MIVISION</a>
         <a href="/#contact">Contact</a>
-      </nav>
-    </div>
-  </header>
+      </div>
+    </nav>
+
+    <button
+      class="menu-btn"
+      type="button"
+      aria-label="Open navigation menu"
+      aria-expanded="false"
+      aria-controls="mobile-navigation"
+    >+</button>
+  </div>
+</header>
 
   <main>
     <section class="hero">
