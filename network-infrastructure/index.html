@@ -361,8 +361,72 @@
       gap: 20px;
     }
 
+    .menu-btn {
+      display: none;
+      background: none;
+      border: 0;
+      font-size: 24px;
+      line-height: 1;
+      color: var(--text);
+      cursor: pointer;
+      padding: 8px;
+    }
+
+    .mobile-nav-links {
+      display: flex;
+      gap: 24px;
+      align-items: center;
+    }
+
     @media (max-width: 900px) {
-      nav { display: none; }
+      .menu-btn {
+        display: block;
+        position: relative;
+        z-index: 102;
+      }
+
+      header .nav {
+        position: relative;
+      }
+
+      header nav {
+        display: block;
+      }
+
+      .mobile-nav-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        padding: 10px 20px 18px;
+        background: rgba(244,243,240,.98);
+        backdrop-filter: blur(12px);
+        border-bottom: 1px solid var(--line);
+        z-index: 101;
+      }
+
+      nav.nav-open .mobile-nav-links {
+        display: flex;
+      }
+
+      .mobile-nav-links a {
+        display: block;
+        padding: 14px 0;
+        border-top: 1px solid var(--line);
+      }
+
+      .mobile-nav-links a:first-child {
+        border-top: 0;
+      }
+
+      .menu-btn[aria-expanded="true"] {
+        transform: rotate(45deg);
+      }
+
 
       .intro-grid,
       .two-col {
@@ -784,5 +848,49 @@
       <a href="/">Back to Professional Profile</a>
     </div>
   </footer>
+<script>
+(() => {
+  const nav = document.querySelector('nav[aria-label="Primary navigation"]');
+  const menuButton = document.querySelector('.menu-btn');
+  const navLinks = document.getElementById('mobile-navigation');
+
+  if (!nav || !menuButton || !navLinks) return;
+
+  const closeMenu = () => {
+    nav.classList.remove('nav-open');
+    menuButton.setAttribute('aria-expanded', 'false');
+    menuButton.setAttribute('aria-label', 'Open navigation menu');
+  };
+
+  menuButton.addEventListener('click', () => {
+    const isOpen = nav.classList.toggle('nav-open');
+
+    menuButton.setAttribute('aria-expanded', String(isOpen));
+    menuButton.setAttribute(
+      'aria-label',
+      isOpen ? 'Close navigation menu' : 'Open navigation menu'
+    );
+  });
+
+  navLinks.addEventListener('click', (event) => {
+    if (event.target.closest('a')) {
+      closeMenu();
+    }
+  });
+
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape') {
+      closeMenu();
+    }
+  });
+
+  window.addEventListener('resize', () => {
+    if (window.innerWidth > 900) {
+      closeMenu();
+    }
+  });
+})();
+</script>
+
 </body>
 </html>
