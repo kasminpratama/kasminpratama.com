@@ -426,75 +426,62 @@ footer{padding:35px 0}
 }
 </script>
 
-<style id="visual-redesign-v2">
-/* Visual redesign V2 — presentation layer only. SEO metadata, JSON-LD and page URLs remain untouched. */
+<style id="visual-redesign-v3">
+/* Visual redesign V3 — photo reduced to a dedicated right-side visual area; header restored to original KASMIN identity. */
 :root{--hero-navy:#071638;--hero-purple:#2e00a9;--hero-blue:#2ac3fd}
 body{background:#f5f7fb}
-nav{position:absolute;top:0;left:0;right:0;z-index:50;background:linear-gradient(180deg,rgba(255,255,255,.88),rgba(255,255,255,.15));border-bottom:0;backdrop-filter:none}
+nav{position:absolute;top:0;left:0;right:0;z-index:50;background:rgba(247,249,252,.90);border-bottom:0;backdrop-filter:blur(10px)}
 .nav-inner{height:92px}
-.brand-logo{display:flex;align-items:center;width:178px;height:52px;overflow:hidden}
-.brand-logo img{display:block;width:178px;height:auto;object-fit:contain}
+.brand{color:#101d46!important;font-weight:900;letter-spacing:-.055em;font-size:20px}
+.brand span{color:#2e00a9}
 .nav-links{color:#19315f;gap:30px;font-weight:500}
 .nav-links a:hover{color:var(--hero-purple)}
-.hero-visual{position:relative;min-height:100svh;height:920px;display:block;overflow:hidden;border-bottom:0;color:#fff;background-image:linear-gradient(90deg,rgba(4,18,53,.84) 0%,rgba(5,23,64,.64) 31%,rgba(6,26,67,.24) 59%,rgba(6,26,67,.04) 100%),linear-gradient(0deg,rgba(4,18,53,.38) 0%,rgba(4,18,53,0) 42%),url('/assets/kasmin-pratama-mivision-field.webp');background-size:cover;background-position:center center}
-.hero-visual:after{content:"";position:absolute;inset:0;pointer-events:none;background:radial-gradient(circle at 70% 42%,rgba(42,195,253,.08),transparent 28%)}
-.hero-content{position:relative;z-index:2;min-height:100%;display:flex;align-items:center;padding-top:70px;padding-bottom:210px}
-.hero-main{max-width:720px}
+.hero-visual{position:relative;min-height:820px;height:820px;display:block;overflow:hidden;border-bottom:0;color:#fff;background:#071638}
+.hero-visual:before{content:"";position:absolute;z-index:0;top:0;right:0;bottom:0;width:57%;background-color:#dcecf8;background-image:url('/assets/kasmin-pratama-mivision-field.webp');background-repeat:no-repeat;background-position:center bottom;background-size:100% auto}
+.hero-visual:after{content:"";position:absolute;z-index:1;inset:0;pointer-events:none;background:linear-gradient(90deg,#071638 0%,#071638 37%,rgba(7,22,56,.96) 45%,rgba(7,22,56,.28) 61%,rgba(7,22,56,0) 76%),linear-gradient(0deg,rgba(7,22,56,.22),rgba(7,22,56,0) 35%)}
+.hero-content{position:relative;z-index:2;min-height:100%;display:flex;align-items:center;padding-top:45px;padding-bottom:130px}
+.hero-main{max-width:650px}
 .hero-visual .eyebrow{color:#fff;margin-bottom:22px;font-size:13px;letter-spacing:.13em}
 .hero-visual .dot{background:var(--hero-blue);box-shadow:0 0 0 5px rgba(42,195,253,.13)}
-.hero-visual h1{font-size:clamp(66px,7.2vw,118px);line-height:.84;letter-spacing:-.07em;color:#fff;max-width:760px;text-shadow:0 3px 22px rgba(0,0,0,.12)}
+.hero-visual h1{font-size:clamp(64px,7vw,112px);line-height:.84;letter-spacing:-.07em;color:#fff;max-width:700px;text-shadow:0 3px 22px rgba(0,0,0,.12)}
 .hero-visual h1 em{color:var(--hero-blue)}
-.hero-visual .hero-copy{max-width:650px;margin-top:30px;color:rgba(255,255,255,.91);font-size:18px;line-height:1.48;text-shadow:0 2px 12px rgba(0,0,0,.22)}
-.hero-visual .actions{margin-top:30px;gap:14px}
+.hero-visual .hero-copy{max-width:590px;margin-top:28px;color:rgba(255,255,255,.90);font-size:17px;line-height:1.52;text-shadow:0 2px 12px rgba(0,0,0,.22)}
+.hero-visual .actions{margin-top:28px;gap:14px}
 .hero-visual .btn{padding:15px 26px;border-radius:8px;border:1px solid rgba(255,255,255,.85);font-size:13px;letter-spacing:.02em}
 .hero-visual .btn.primary{background:linear-gradient(135deg,#3210d5,#2e00a9);border-color:#3210d5;box-shadow:0 12px 30px rgba(46,0,169,.35)}
 .hero-visual .btn:not(.primary){background:rgba(7,22,56,.18);backdrop-filter:blur(5px)}
-.hero-location{position:absolute;right:7%;top:33%;z-index:3;display:flex;align-items:center;gap:13px;padding:13px 18px 13px 13px;border:1px solid rgba(255,255,255,.22);border-radius:16px;background:rgba(15,25,47,.54);backdrop-filter:blur(12px);box-shadow:0 15px 40px rgba(0,0,0,.16)}
+.hero-location{position:absolute;right:4.5%;top:29%;z-index:3;display:flex;align-items:center;gap:13px;padding:13px 18px 13px 13px;border:1px solid rgba(255,255,255,.30);border-radius:16px;background:rgba(15,25,47,.56);backdrop-filter:blur(12px);box-shadow:0 15px 40px rgba(0,0,0,.16)}
 .location-icon{width:40px;height:40px;border-radius:11px;display:grid;place-items:center;background:linear-gradient(135deg,#2ac3fd,#2d51cc);font-size:23px;font-weight:700}
-.hero-location strong{display:block;font-size:16px;line-height:1.2}
-.hero-location small{display:block;margin-top:4px;color:rgba(255,255,255,.78);font-size:13px}
-.hero-focus{position:absolute;z-index:4;left:50%;bottom:62px;transform:translateX(-50%);display:grid;grid-template-columns:repeat(4,1fr);gap:12px;width:min(calc(100% - 56px),1415px)}
-.focus-card{min-height:104px;display:flex;align-items:center;gap:15px;padding:16px 18px;border:1px solid rgba(255,255,255,.55);border-radius:12px;background:rgba(247,250,255,.94);color:#12265b;box-shadow:0 12px 35px rgba(0,0,0,.12);backdrop-filter:blur(8px);transition:transform .2s ease,box-shadow .2s ease}
+.hero-location strong{display:block;font-size:16px;line-height:1.2}.hero-location small{display:block;margin-top:4px;color:rgba(255,255,255,.78);font-size:13px}
+.hero-focus{position:absolute;z-index:4;left:50%;bottom:34px;transform:translateX(-50%);display:grid;grid-template-columns:repeat(4,1fr);gap:12px;width:min(calc(100% - 56px),1415px)}
+.focus-card{min-height:96px;display:flex;align-items:center;gap:15px;padding:16px 18px;border:1px solid rgba(255,255,255,.55);border-radius:12px;background:rgba(247,250,255,.95);color:#12265b;box-shadow:0 12px 35px rgba(0,0,0,.12);backdrop-filter:blur(8px);transition:transform .2s ease,box-shadow .2s ease}
 .focus-card:hover{transform:translateY(-4px);box-shadow:0 18px 40px rgba(0,0,0,.18)}
 .focus-icon{flex:0 0 48px;width:48px;height:48px;border-radius:12px;display:grid;place-items:center;background:linear-gradient(145deg,#2e00a9,#2d51cc);color:#fff;font-size:23px;font-weight:700}
-.focus-card:nth-child(2) .focus-icon{background:linear-gradient(145deg,#2d51cc,#244bc4)}
-.focus-card:nth-child(3) .focus-icon{background:linear-gradient(145deg,#2ac3fd,#1598dc)}
-.focus-card:nth-child(4) .focus-icon{background:linear-gradient(145deg,#64759b,#435477)}
-.focus-card strong{display:block;font-size:15px;line-height:1.25;letter-spacing:-.01em}
-.focus-card small{display:block;margin-top:6px;color:#40537e;font-size:12px;line-height:1.35}
+.focus-card:nth-child(2) .focus-icon{background:linear-gradient(145deg,#2d51cc,#244bc4)}.focus-card:nth-child(3) .focus-icon{background:linear-gradient(145deg,#2ac3fd,#1598dc)}.focus-card:nth-child(4) .focus-icon{background:linear-gradient(145deg,#64759b,#435477)}
+.focus-card strong{display:block;font-size:15px;line-height:1.25;letter-spacing:-.01em}.focus-card small{display:block;margin-top:6px;color:#40537e;font-size:12px;line-height:1.35}
 @media(max-width:1050px){
   .nav-links{gap:18px;font-size:12px}
-  .hero-visual h1{font-size:clamp(60px,8vw,94px)}
-  .hero-location{right:4%;top:29%}
-  .hero-focus{grid-template-columns:repeat(2,1fr);bottom:28px}
-  .hero-content{padding-bottom:270px}
+  .hero-visual{height:820px}
+  .hero-visual:before{width:53%}
+  .hero-visual:after{background:linear-gradient(90deg,#071638 0%,#071638 43%,rgba(7,22,56,.90) 53%,rgba(7,22,56,.22) 70%,rgba(7,22,56,0) 88%),linear-gradient(0deg,rgba(7,22,56,.25),rgba(7,22,56,0) 35%)}
+  .hero-visual h1{font-size:clamp(58px,8vw,94px)}
+  .hero-location{right:3%;top:25%}
+  .hero-focus{grid-template-columns:repeat(2,1fr);bottom:22px}
+  .hero-content{padding-bottom:230px}
 }
 @media(max-width:800px){
-  nav{background:rgba(255,255,255,.9);backdrop-filter:blur(12px)}
-  .nav-inner{height:72px}
-  .brand-logo{width:145px;height:44px}.brand-logo img{width:145px}
-  .menu-btn{display:block;color:#10234f}
-  .nav-links{top:72px;background:rgba(255,255,255,.97)}
-  .hero-visual{height:auto;min-height:900px;background-position:60% center}
-  .hero-content{min-height:0;padding-top:155px;padding-bottom:360px}
-  .hero-main{max-width:100%}
-  .hero-visual h1{font-size:clamp(55px,16vw,86px)}
-  .hero-visual .hero-copy{font-size:16px;max-width:600px}
-  .hero-location{top:92px;right:20px;padding:8px 12px 8px 8px}
-  .location-icon{width:34px;height:34px;font-size:19px}
-  .hero-location strong{font-size:13px}.hero-location small{font-size:11px}
-  .hero-focus{position:absolute;grid-template-columns:1fr 1fr;width:calc(100% - 40px);bottom:24px;gap:8px}
-  .focus-card{min-height:102px;padding:13px;gap:10px}
-  .focus-icon{flex-basis:38px;width:38px;height:38px;font-size:18px;border-radius:9px}
-  .focus-card strong{font-size:12px}.focus-card small{font-size:10px;margin-top:4px}
+  nav{position:absolute;background:rgba(255,255,255,.92);backdrop-filter:blur(12px)}
+  .nav-inner{height:72px}.menu-btn{display:block;color:#10234f}.nav-links{top:72px;background:rgba(255,255,255,.97)}
+  .hero-visual{height:auto;min-height:980px}
+  .hero-visual:before{width:100%;height:48%;top:auto;bottom:0;background-size:100% auto;background-position:center bottom}
+  .hero-visual:after{background:linear-gradient(180deg,#071638 0%,#071638 45%,rgba(7,22,56,.70) 63%,rgba(7,22,56,.10) 100%)}
+  .hero-content{min-height:0;padding-top:150px;padding-bottom:470px}.hero-main{max-width:100%}
+  .hero-visual h1{font-size:clamp(55px,16vw,86px)}.hero-visual .hero-copy{font-size:16px;max-width:600px}
+  .hero-location{top:92px;right:20px;padding:8px 12px 8px 8px}.location-icon{width:34px;height:34px;font-size:19px}.hero-location strong{font-size:13px}.hero-location small{font-size:11px}
+  .hero-focus{position:absolute;grid-template-columns:1fr 1fr;width:calc(100% - 40px);bottom:24px;gap:8px}.focus-card{min-height:102px;padding:13px;gap:10px}.focus-icon{flex-basis:38px;width:38px;height:38px;font-size:18px;border-radius:9px}.focus-card strong{font-size:12px}.focus-card small{font-size:10px;margin-top:4px}
 }
 @media(max-width:500px){
-  .hero-visual{min-height:980px;background-position:58% center}
-  .hero-content{padding-top:145px;padding-bottom:420px}
-  .hero-visual .actions{flex-direction:column;align-items:flex-start}
-  .hero-visual .btn{width:max-content}
-  .hero-focus{grid-template-columns:1fr;bottom:16px}
-  .focus-card{min-height:74px}
+  .hero-visual{min-height:1050px}.hero-visual:before{height:43%}.hero-content{padding-top:145px;padding-bottom:470px}.hero-visual .actions{flex-direction:column;align-items:flex-start}.hero-visual .btn{width:max-content}.hero-focus{grid-template-columns:1fr;bottom:16px}.focus-card{min-height:74px}
 }
 </style>
 </head>
@@ -503,7 +490,7 @@ nav{position:absolute;top:0;left:0;right:0;z-index:50;background:linear-gradient
 
 <nav aria-label="Primary navigation">
   <div class="container nav-inner">
-    <a href="#home" class="brand brand-logo" aria-label="MIVISION — Kasmin Pratama"><img src="/assets/mivision-official-horizontal.png" alt="Mivision"></a>
+    <a href="#home" class="brand" aria-label="Kasmin Pratama">KASMIN<span>.</span></a>
     <div class="nav-links" id="mobile-navigation">
       <a href="#about">About</a>
       <a href="#expertise">Expertise</a>
