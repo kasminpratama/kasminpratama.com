@@ -426,34 +426,76 @@ footer{padding:35px 0}
 }
 </script>
 
-<style id="visual-redesign">
-/* VISUAL LAYER ONLY — MIVISION VISUAL REDESIGN */
-:root{--bg:#f3f6fb;--surface:#fff;--ink:#111638;--muted:#5f6b82;--line:#dce3ef;--accent:#2e00a9;--accent-blue:#2d51cc;--accent-cyan:#2ac3fd;--dark:#0e1240;--max:1180px}
-body{background:var(--bg);color:var(--ink)}
-nav{background:rgba(248,250,253,.86);border-bottom:1px solid rgba(220,227,239,.85);box-shadow:0 6px 28px rgba(14,18,64,.06)}
-.brand{color:var(--ink)}.brand span{color:var(--accent-blue)}.nav-links{color:#5b6880}.nav-links a:hover{color:var(--accent-blue)}
-.hero{position:relative;min-height:760px;overflow:hidden;isolation:isolate;border-bottom:0;background-image:url("/assets/kasmin-pratama-mivision-field.webp");background-size:cover;background-position:68% center;color:#fff}
-.hero::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,rgba(8,12,38,.97) 0%,rgba(8,12,38,.90) 30%,rgba(8,12,38,.52) 55%,rgba(8,12,38,.18) 78%,rgba(8,12,38,.30) 100%)}
-.hero::after{content:"";position:absolute;inset:auto 0 0 0;height:120px;z-index:-1;background:linear-gradient(0deg,rgba(8,12,38,.34),transparent)}
-.hero-grid{min-height:760px;grid-template-columns:1.25fr .75fr;gap:70px;align-items:center}
-.eyebrow{color:var(--accent-cyan);text-shadow:0 1px 12px rgba(0,0,0,.25)}.dot{background:var(--accent-cyan);box-shadow:0 0 0 5px rgba(42,195,253,.12)}
-h1{color:#fff;text-shadow:0 8px 28px rgba(0,0,0,.22)}.hero h1 em{color:var(--accent-cyan)}
-.hero-copy{color:rgba(255,255,255,.88);max-width:630px;text-shadow:0 2px 14px rgba(0,0,0,.28)}
-.actions{margin-top:34px}.btn{border-color:rgba(255,255,255,.72);background:rgba(255,255,255,.08);color:#fff;border-radius:10px;backdrop-filter:blur(8px)}
-.btn.primary{background:var(--accent);border-color:var(--accent);color:#fff;box-shadow:0 12px 30px rgba(46,0,169,.30)}
-.btn:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(0,0,0,.18)}
-.hero-side{border:1px solid rgba(255,255,255,.18);border-radius:22px;padding:34px 34px 18px;background:rgba(14,18,64,.78);box-shadow:0 24px 60px rgba(0,0,0,.22);backdrop-filter:blur(12px)}
-.hero-side p{color:rgba(255,255,255,.62);letter-spacing:.14em;text-transform:uppercase;font-size:11px;font-weight:800}.side-list li{border-top:1px solid rgba(255,255,255,.18);padding:17px 0;color:#fff}.side-list li a:hover{color:var(--accent-cyan)}
-section{background:var(--bg);border-bottom:1px solid var(--line)}section:nth-of-type(even){background:#fff}
-.section-label,.card-num,.certification-meta,.timeline-year,.work-num,.arrow{color:var(--accent-blue)}.section-title{color:var(--ink)}.section-intro,.about-text{color:var(--muted)}
-.cards,.certification-grid{border-color:var(--line)}.card,.certification{background:#fff;border-color:var(--line)}.card:hover,.certification:hover{background:#f7f9fd;transform:translateY(-3px);transition:.25s ease}
-.professional-facts{border-color:var(--line)}.fact{border-color:var(--line)}.fact:nth-child(even){border-left-color:var(--line)}
-.timeline-item,.work{border-color:var(--line)}.work:last-child{border-bottom-color:var(--line)}.work:hover{background:#fff;padding-left:14px;padding-right:14px;border-radius:12px;transition:.25s ease}
-.mivision{background:radial-gradient(circle at 78% 28%,rgba(42,195,253,.14),transparent 28%),linear-gradient(135deg,#0e1240,#1a0b63 58%,#2e00a9)}.mivision .section-label{color:var(--accent-cyan)}.mivision .btn.primary{background:#fff;color:var(--dark);border-color:#fff}
-.contact-links a{border-color:var(--line)}.contact-links a:hover{color:var(--accent-blue);padding-left:10px;transition:.2s ease}
-footer{background:#fff;border-top-color:var(--line)}
-@media(max-width:800px){.hero{min-height:760px;background-position:70% center}.hero::before{background:linear-gradient(90deg,rgba(8,12,38,.96) 0%,rgba(8,12,38,.82) 52%,rgba(8,12,38,.42) 100%)}.hero-grid{min-height:760px;gap:36px;align-items:center}.hero-side{border-radius:18px;background:rgba(14,18,64,.72)}}
-@media(max-width:520px){.hero{min-height:820px;background-position:68% center}.hero-grid{min-height:820px}h1{font-size:clamp(52px,16vw,88px)}.hero-copy{font-size:17px}.hero-side{padding:26px 24px 12px}}
+<style id="visual-redesign-v2">
+/* Visual redesign V2 — presentation layer only. SEO metadata, JSON-LD and page URLs remain untouched. */
+:root{--hero-navy:#071638;--hero-purple:#2e00a9;--hero-blue:#2ac3fd}
+body{background:#f5f7fb}
+nav{position:absolute;top:0;left:0;right:0;z-index:50;background:linear-gradient(180deg,rgba(255,255,255,.88),rgba(255,255,255,.15));border-bottom:0;backdrop-filter:none}
+.nav-inner{height:92px}
+.brand-logo{display:flex;align-items:center;width:178px;height:52px;overflow:hidden}
+.brand-logo img{display:block;width:178px;height:auto;object-fit:contain}
+.nav-links{color:#19315f;gap:30px;font-weight:500}
+.nav-links a:hover{color:var(--hero-purple)}
+.hero-visual{position:relative;min-height:100svh;height:920px;display:block;overflow:hidden;border-bottom:0;color:#fff;background-image:linear-gradient(90deg,rgba(4,18,53,.84) 0%,rgba(5,23,64,.64) 31%,rgba(6,26,67,.24) 59%,rgba(6,26,67,.04) 100%),linear-gradient(0deg,rgba(4,18,53,.38) 0%,rgba(4,18,53,0) 42%),url('/assets/kasmin-pratama-mivision-field.webp');background-size:cover;background-position:center center}
+.hero-visual:after{content:"";position:absolute;inset:0;pointer-events:none;background:radial-gradient(circle at 70% 42%,rgba(42,195,253,.08),transparent 28%)}
+.hero-content{position:relative;z-index:2;min-height:100%;display:flex;align-items:center;padding-top:70px;padding-bottom:210px}
+.hero-main{max-width:720px}
+.hero-visual .eyebrow{color:#fff;margin-bottom:22px;font-size:13px;letter-spacing:.13em}
+.hero-visual .dot{background:var(--hero-blue);box-shadow:0 0 0 5px rgba(42,195,253,.13)}
+.hero-visual h1{font-size:clamp(66px,7.2vw,118px);line-height:.84;letter-spacing:-.07em;color:#fff;max-width:760px;text-shadow:0 3px 22px rgba(0,0,0,.12)}
+.hero-visual h1 em{color:var(--hero-blue)}
+.hero-visual .hero-copy{max-width:650px;margin-top:30px;color:rgba(255,255,255,.91);font-size:18px;line-height:1.48;text-shadow:0 2px 12px rgba(0,0,0,.22)}
+.hero-visual .actions{margin-top:30px;gap:14px}
+.hero-visual .btn{padding:15px 26px;border-radius:8px;border:1px solid rgba(255,255,255,.85);font-size:13px;letter-spacing:.02em}
+.hero-visual .btn.primary{background:linear-gradient(135deg,#3210d5,#2e00a9);border-color:#3210d5;box-shadow:0 12px 30px rgba(46,0,169,.35)}
+.hero-visual .btn:not(.primary){background:rgba(7,22,56,.18);backdrop-filter:blur(5px)}
+.hero-location{position:absolute;right:7%;top:33%;z-index:3;display:flex;align-items:center;gap:13px;padding:13px 18px 13px 13px;border:1px solid rgba(255,255,255,.22);border-radius:16px;background:rgba(15,25,47,.54);backdrop-filter:blur(12px);box-shadow:0 15px 40px rgba(0,0,0,.16)}
+.location-icon{width:40px;height:40px;border-radius:11px;display:grid;place-items:center;background:linear-gradient(135deg,#2ac3fd,#2d51cc);font-size:23px;font-weight:700}
+.hero-location strong{display:block;font-size:16px;line-height:1.2}
+.hero-location small{display:block;margin-top:4px;color:rgba(255,255,255,.78);font-size:13px}
+.hero-focus{position:absolute;z-index:4;left:50%;bottom:62px;transform:translateX(-50%);display:grid;grid-template-columns:repeat(4,1fr);gap:12px;width:min(calc(100% - 56px),1415px)}
+.focus-card{min-height:104px;display:flex;align-items:center;gap:15px;padding:16px 18px;border:1px solid rgba(255,255,255,.55);border-radius:12px;background:rgba(247,250,255,.94);color:#12265b;box-shadow:0 12px 35px rgba(0,0,0,.12);backdrop-filter:blur(8px);transition:transform .2s ease,box-shadow .2s ease}
+.focus-card:hover{transform:translateY(-4px);box-shadow:0 18px 40px rgba(0,0,0,.18)}
+.focus-icon{flex:0 0 48px;width:48px;height:48px;border-radius:12px;display:grid;place-items:center;background:linear-gradient(145deg,#2e00a9,#2d51cc);color:#fff;font-size:23px;font-weight:700}
+.focus-card:nth-child(2) .focus-icon{background:linear-gradient(145deg,#2d51cc,#244bc4)}
+.focus-card:nth-child(3) .focus-icon{background:linear-gradient(145deg,#2ac3fd,#1598dc)}
+.focus-card:nth-child(4) .focus-icon{background:linear-gradient(145deg,#64759b,#435477)}
+.focus-card strong{display:block;font-size:15px;line-height:1.25;letter-spacing:-.01em}
+.focus-card small{display:block;margin-top:6px;color:#40537e;font-size:12px;line-height:1.35}
+@media(max-width:1050px){
+  .nav-links{gap:18px;font-size:12px}
+  .hero-visual h1{font-size:clamp(60px,8vw,94px)}
+  .hero-location{right:4%;top:29%}
+  .hero-focus{grid-template-columns:repeat(2,1fr);bottom:28px}
+  .hero-content{padding-bottom:270px}
+}
+@media(max-width:800px){
+  nav{background:rgba(255,255,255,.9);backdrop-filter:blur(12px)}
+  .nav-inner{height:72px}
+  .brand-logo{width:145px;height:44px}.brand-logo img{width:145px}
+  .menu-btn{display:block;color:#10234f}
+  .nav-links{top:72px;background:rgba(255,255,255,.97)}
+  .hero-visual{height:auto;min-height:900px;background-position:60% center}
+  .hero-content{min-height:0;padding-top:155px;padding-bottom:360px}
+  .hero-main{max-width:100%}
+  .hero-visual h1{font-size:clamp(55px,16vw,86px)}
+  .hero-visual .hero-copy{font-size:16px;max-width:600px}
+  .hero-location{top:92px;right:20px;padding:8px 12px 8px 8px}
+  .location-icon{width:34px;height:34px;font-size:19px}
+  .hero-location strong{font-size:13px}.hero-location small{font-size:11px}
+  .hero-focus{position:absolute;grid-template-columns:1fr 1fr;width:calc(100% - 40px);bottom:24px;gap:8px}
+  .focus-card{min-height:102px;padding:13px;gap:10px}
+  .focus-icon{flex-basis:38px;width:38px;height:38px;font-size:18px;border-radius:9px}
+  .focus-card strong{font-size:12px}.focus-card small{font-size:10px;margin-top:4px}
+}
+@media(max-width:500px){
+  .hero-visual{min-height:980px;background-position:58% center}
+  .hero-content{padding-top:145px;padding-bottom:420px}
+  .hero-visual .actions{flex-direction:column;align-items:flex-start}
+  .hero-visual .btn{width:max-content}
+  .hero-focus{grid-template-columns:1fr;bottom:16px}
+  .focus-card{min-height:74px}
+}
 </style>
 </head>
 
@@ -461,7 +503,7 @@ footer{background:#fff;border-top-color:var(--line)}
 
 <nav aria-label="Primary navigation">
   <div class="container nav-inner">
-    <a href="#home" class="brand">KASMIN<span>.</span></a>
+    <a href="#home" class="brand brand-logo" aria-label="MIVISION — Kasmin Pratama"><img src="/assets/mivision-official-horizontal.png" alt="Mivision"></a>
     <div class="nav-links" id="mobile-navigation">
       <a href="#about">About</a>
       <a href="#expertise">Expertise</a>
@@ -477,29 +519,43 @@ footer{background:#fff;border-top-color:var(--line)}
 </nav>
 
 <main id="main-content">
-<section class="hero" id="home" aria-labelledby="page-title">
-  <div class="container hero-grid">
-    <div>
-      <div class="eyebrow"><span class="dot"></span> Professional Profile</div>
+<section class="hero hero-visual" id="home" aria-labelledby="page-title">
+  <div class="hero-location" aria-label="Location">
+    <span class="location-icon" aria-hidden="true">⌖</span>
+    <div><strong>Kota Baubau</strong><small>Sulawesi Tenggara</small></div>
+  </div>
+
+  <div class="container hero-content">
+    <div class="hero-main">
+      <div class="eyebrow"><span class="dot"></span> Technology Systems Professional</div>
       <h1 id="page-title">KASMIN<br><em>PRATAMA</em></h1>
-<p class="hero-copy">
-  Kasmin Pratama, also known as Ibenk Maulana, is the owner of MIVISION and a hands-on technology practitioner based in Kota Baubau, Sulawesi Tenggara. His professional focus includes CCTV and surveillance systems, network infrastructure, Starlink and internet connectivity, and practical technology implementation.
-</p>
+      <p class="hero-copy">
+        Kasmin Pratama, also known as Ibenk Maulana, is the owner of MIVISION and a hands-on technology practitioner based in Kota Baubau, Sulawesi Tenggara. His professional focus includes CCTV and surveillance systems, network infrastructure, Starlink and internet connectivity, and practical technology implementation.
+      </p>
       <div class="actions">
-        <a href="#about" class="btn primary">VIEW PROFILE ↓</a>
+        <a href="#about" class="btn primary">VIEW PROFILE →</a>
         <a href="#mivision" class="btn">MIVISION →</a>
       </div>
     </div>
+  </div>
 
-    <aside class="hero-side">
-      <p>Professional focus</p>
-      <ul class="side-list">
-        <li><a href="/cctv-surveillance/">CCTV &amp; Surveillance Systems</a></li>
-        <li><a href="/network-infrastructure/">Network Infrastructure</a></li>
-        <li><a href="/starlink-connectivity/">Starlink &amp; Internet Connectivity</a></li>
-        <li>Hands-on Implementation</li>
-      </ul>
-    </aside>
+  <div class="container hero-focus" aria-label="Professional focus">
+    <a class="focus-card" href="/cctv-surveillance/">
+      <span class="focus-icon" aria-hidden="true">▣</span>
+      <span><strong>CCTV &amp; Surveillance</strong><small>Installation, configuration, recording, and integration</small></span>
+    </a>
+    <a class="focus-card" href="/network-infrastructure/">
+      <span class="focus-icon" aria-hidden="true">⌘</span>
+      <span><strong>Network Infrastructure</strong><small>LAN, routing, switching, wireless, and troubleshooting</small></span>
+    </a>
+    <a class="focus-card" href="/starlink-connectivity/">
+      <span class="focus-icon" aria-hidden="true">◔</span>
+      <span><strong>Starlink &amp; Connectivity</strong><small>Starlink deployment and internet integration</small></span>
+    </a>
+    <a class="focus-card" href="#expertise">
+      <span class="focus-icon" aria-hidden="true">⚙</span>
+      <span><strong>Technology Systems</strong><small>Practical implementation for real environments</small></span>
+    </a>
   </div>
 </section>
 
