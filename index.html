@@ -484,6 +484,47 @@ nav{position:absolute;top:0;left:0;right:0;z-index:50;background:rgba(247,249,25
   .hero-visual{min-height:1050px}.hero-visual:before{height:43%}.hero-content{padding-top:145px;padding-bottom:470px}.hero-visual .actions{flex-direction:column;align-items:flex-start}.hero-visual .btn{width:max-content}.hero-focus{grid-template-columns:1fr;bottom:16px}.focus-card{min-height:74px}
 }
 </style>
+
+<style id="visual-redesign-v4">
+/* V4 responsive correction: layout/spacing only. No content, SEO, JSON-LD, photo, or brand asset changes. */
+@media (min-width:801px){
+  .hero-visual{min-height:800px;height:800px}
+  .hero-visual:before{width:55%;background-size:100% auto;background-position:center bottom}
+  .hero-main{max-width:625px}
+  .hero-focus{bottom:26px;width:min(calc(100% - 56px),1220px);gap:10px}
+  .focus-card{min-height:88px;padding:14px 16px}
+}
+@media (max-width:800px){
+  .hero-visual{height:auto;min-height:1040px;overflow:hidden}
+  .hero-visual:before{top:auto;right:0;bottom:0;width:100%;height:52%;background-size:auto 100%;background-position:center bottom}
+  .hero-visual:after{background:linear-gradient(180deg,#071638 0%,#071638 48%,rgba(7,22,56,.92) 57%,rgba(7,22,56,.20) 78%,rgba(7,22,56,.08) 100%)}
+  .hero-content{display:block;min-height:0;padding:150px 20px 350px}
+  .hero-main{max-width:100%}
+  .hero-visual .eyebrow{margin-bottom:18px;font-size:12px}
+  .hero-visual h1{font-size:clamp(54px,15vw,78px);line-height:.87;max-width:100%;letter-spacing:-.065em}
+  .hero-visual .hero-copy{margin-top:24px;font-size:16px;line-height:1.55;max-width:620px}
+  .hero-visual .actions{margin-top:24px;gap:10px;flex-direction:row;align-items:center}
+  .hero-visual .btn{padding:13px 19px;font-size:12px;border-radius:8px}
+  .hero-location{top:92px;right:20px}
+  .hero-focus{left:20px;right:20px;bottom:18px;width:auto;transform:none;display:grid;grid-template-columns:1fr;gap:7px}
+  .focus-card{min-height:70px;padding:11px 14px;gap:12px;border-radius:14px}
+  .focus-icon{flex:0 0 40px;width:40px;height:40px;font-size:18px;border-radius:10px}
+  .focus-card strong{font-size:13px;line-height:1.2}
+  .focus-card small{font-size:10px;line-height:1.3;margin-top:3px}
+}
+@media (max-width:500px){
+  .hero-visual{min-height:1040px}
+  .hero-content{padding:150px 20px 355px}
+  .hero-visual:before{height:49%;background-size:auto 100%;background-position:58% bottom}
+  .hero-location{top:92px;right:20px}
+  .hero-visual h1{font-size:clamp(52px,15.5vw,76px)}
+  .hero-visual .hero-copy{font-size:15.5px;line-height:1.52}
+  .hero-visual .actions{flex-direction:column;align-items:flex-start;margin-top:22px}
+  .hero-visual .btn{width:auto;min-width:190px;text-align:center;padding:13px 18px}
+  .hero-focus{bottom:16px;gap:7px}
+  .focus-card{min-height:68px;padding:10px 13px}
+}
+</style>
 </head>
 
 <body>
