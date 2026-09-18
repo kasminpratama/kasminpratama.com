@@ -425,6 +425,36 @@ footer{padding:35px 0}
   ]
 }
 </script>
+
+<style id="visual-redesign">
+/* VISUAL LAYER ONLY — MIVISION VISUAL REDESIGN */
+:root{--bg:#f3f6fb;--surface:#fff;--ink:#111638;--muted:#5f6b82;--line:#dce3ef;--accent:#2e00a9;--accent-blue:#2d51cc;--accent-cyan:#2ac3fd;--dark:#0e1240;--max:1180px}
+body{background:var(--bg);color:var(--ink)}
+nav{background:rgba(248,250,253,.86);border-bottom:1px solid rgba(220,227,239,.85);box-shadow:0 6px 28px rgba(14,18,64,.06)}
+.brand{color:var(--ink)}.brand span{color:var(--accent-blue)}.nav-links{color:#5b6880}.nav-links a:hover{color:var(--accent-blue)}
+.hero{position:relative;min-height:760px;overflow:hidden;isolation:isolate;border-bottom:0;background-image:url("/assets/kasmin-pratama-mivision-field.webp");background-size:cover;background-position:68% center;color:#fff}
+.hero::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,rgba(8,12,38,.97) 0%,rgba(8,12,38,.90) 30%,rgba(8,12,38,.52) 55%,rgba(8,12,38,.18) 78%,rgba(8,12,38,.30) 100%)}
+.hero::after{content:"";position:absolute;inset:auto 0 0 0;height:120px;z-index:-1;background:linear-gradient(0deg,rgba(8,12,38,.34),transparent)}
+.hero-grid{min-height:760px;grid-template-columns:1.25fr .75fr;gap:70px;align-items:center}
+.eyebrow{color:var(--accent-cyan);text-shadow:0 1px 12px rgba(0,0,0,.25)}.dot{background:var(--accent-cyan);box-shadow:0 0 0 5px rgba(42,195,253,.12)}
+h1{color:#fff;text-shadow:0 8px 28px rgba(0,0,0,.22)}.hero h1 em{color:var(--accent-cyan)}
+.hero-copy{color:rgba(255,255,255,.88);max-width:630px;text-shadow:0 2px 14px rgba(0,0,0,.28)}
+.actions{margin-top:34px}.btn{border-color:rgba(255,255,255,.72);background:rgba(255,255,255,.08);color:#fff;border-radius:10px;backdrop-filter:blur(8px)}
+.btn.primary{background:var(--accent);border-color:var(--accent);color:#fff;box-shadow:0 12px 30px rgba(46,0,169,.30)}
+.btn:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(0,0,0,.18)}
+.hero-side{border:1px solid rgba(255,255,255,.18);border-radius:22px;padding:34px 34px 18px;background:rgba(14,18,64,.78);box-shadow:0 24px 60px rgba(0,0,0,.22);backdrop-filter:blur(12px)}
+.hero-side p{color:rgba(255,255,255,.62);letter-spacing:.14em;text-transform:uppercase;font-size:11px;font-weight:800}.side-list li{border-top:1px solid rgba(255,255,255,.18);padding:17px 0;color:#fff}.side-list li a:hover{color:var(--accent-cyan)}
+section{background:var(--bg);border-bottom:1px solid var(--line)}section:nth-of-type(even){background:#fff}
+.section-label,.card-num,.certification-meta,.timeline-year,.work-num,.arrow{color:var(--accent-blue)}.section-title{color:var(--ink)}.section-intro,.about-text{color:var(--muted)}
+.cards,.certification-grid{border-color:var(--line)}.card,.certification{background:#fff;border-color:var(--line)}.card:hover,.certification:hover{background:#f7f9fd;transform:translateY(-3px);transition:.25s ease}
+.professional-facts{border-color:var(--line)}.fact{border-color:var(--line)}.fact:nth-child(even){border-left-color:var(--line)}
+.timeline-item,.work{border-color:var(--line)}.work:last-child{border-bottom-color:var(--line)}.work:hover{background:#fff;padding-left:14px;padding-right:14px;border-radius:12px;transition:.25s ease}
+.mivision{background:radial-gradient(circle at 78% 28%,rgba(42,195,253,.14),transparent 28%),linear-gradient(135deg,#0e1240,#1a0b63 58%,#2e00a9)}.mivision .section-label{color:var(--accent-cyan)}.mivision .btn.primary{background:#fff;color:var(--dark);border-color:#fff}
+.contact-links a{border-color:var(--line)}.contact-links a:hover{color:var(--accent-blue);padding-left:10px;transition:.2s ease}
+footer{background:#fff;border-top-color:var(--line)}
+@media(max-width:800px){.hero{min-height:760px;background-position:70% center}.hero::before{background:linear-gradient(90deg,rgba(8,12,38,.96) 0%,rgba(8,12,38,.82) 52%,rgba(8,12,38,.42) 100%)}.hero-grid{min-height:760px;gap:36px;align-items:center}.hero-side{border-radius:18px;background:rgba(14,18,64,.72)}}
+@media(max-width:520px){.hero{min-height:820px;background-position:68% center}.hero-grid{min-height:820px}h1{font-size:clamp(52px,16vw,88px)}.hero-copy{font-size:17px}.hero-side{padding:26px 24px 12px}}
+</style>
 </head>
 
 <body>
