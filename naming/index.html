@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Naming System | Kasmin Pratama</title>
+<meta name="description" content="Internal naming standardizer for MIVISION products and services.">
+<meta name="theme-color" content="#111318">
+<style>
+:root{--p:#2E00A9;--b:#2D51CC;--s:#2AC3FD;--ink:#12172b;--muted:#667085;--line:#e3e7f1;--bg:#f3f5fb;--white:#fff;--shadow:0 14px 38px rgba(25,32,74,.07);--radius:18px}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(ellipse at 85% 0%,rgba(42,195,253,.10),transparent 32%),var(--bg);color:var(--ink);font:14px/1.55 Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;-webkit-font-smoothing:antialiased}
+header{position:relative;overflow:hidden;background:linear-gradient(115deg,#210078 0%,var(--p) 38%,var(--b) 100%);color:#fff;padding:30px 22px 28px;border-bottom:3px solid var(--s)}header:after{content:"";position:absolute;width:360px;height:360px;border:1px solid rgba(255,255,255,.13);border-radius:50%;right:-100px;top:-210px;box-shadow:0 0 0 38px rgba(255,255,255,.035),0 0 0 76px rgba(255,255,255,.025);pointer-events:none}.wrap{max-width:1180px;margin:auto;position:relative;z-index:1}.brand{font-size:27px;font-weight:900;letter-spacing:2.4px;line-height:1.1}.sub{color:#e2e9ff;font-size:12px;letter-spacing:.035em}.brand+.sub{margin-top:7px}.wrap h2{font-size:clamp(23px,3vw,30px);letter-spacing:-.035em;line-height:1.2;margin:23px 0 7px!important}.wrap h2:before{content:"";display:block;width:34px;height:3px;border-radius:3px;background:var(--s);margin-bottom:12px}
+main{max-width:1180px;margin:24px auto;padding:0 20px 42px}.muted{color:var(--muted);font-size:12.5px}.tabs{display:flex;gap:7px;margin:20px 0 16px;padding:5px;background:#e9edf7;border:1px solid #e0e5f0;border-radius:13px;width:max-content;max-width:100%}
+button{border:1px solid transparent;border-radius:10px;padding:10px 15px;font:inherit;font-size:13px;font-weight:750;cursor:pointer;transition:transform .16s ease,box-shadow .16s ease,background .16s ease}button:hover:not(:disabled){transform:translateY(-1px);box-shadow:0 5px 14px rgba(46,0,169,.13)}button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:3px solid rgba(42,195,253,.42);outline-offset:2px}button:disabled{opacity:.4;cursor:not-allowed}.tab{background:transparent;color:#536079;padding:9px 17px}.tab.active,.primary{background:linear-gradient(110deg,var(--p),var(--b));color:white;box-shadow:0 5px 12px rgba(46,0,169,.16)}.secondary{background:#f0f3f9;border-color:#e3e7f0;color:#29334b}.sky{background:#e4f8ff;border-color:#bdeeff;color:#064b69}.layout{display:grid;grid-template-columns:minmax(0,1.08fr) minmax(0,.92fr);gap:18px;align-items:start}
+.card{background:var(--white);border:1px solid #e6e9f2;border-radius:var(--radius);padding:23px;min-width:0;box-shadow:var(--shadow)}.card h2{font-size:16px;letter-spacing:-.015em;margin:0 0 17px;display:flex;align-items:center;gap:10px}.card h2:before{content:"";display:block;width:4px;height:19px;background:linear-gradient(var(--p),var(--s));border-radius:4px;flex:0 0 4px}label{display:block;font-size:12px;font-weight:750;color:#39445d;margin:15px 0 6px;letter-spacing:.005em}
+input,select,textarea{width:100%;padding:11px 12px;border:1px solid #d7ddeb;border-radius:10px;font:inherit;font-size:13px;background:#fff;color:var(--ink);min-width:0;transition:border-color .15s,box-shadow .15s}input:hover,select:hover,textarea:hover{border-color:#b5bfd5}input:focus,select:focus,textarea:focus{outline:none;border-color:#7b6add;box-shadow:0 0 0 3px rgba(46,0,169,.08)}input::placeholder,textarea::placeholder{color:#9aa3b5}.row{display:grid;grid-template-columns:1fr 1fr;gap:12px}.actions{display:flex;gap:9px;flex-wrap:wrap;margin-top:17px}.output{position:relative;background:linear-gradient(135deg,#f6f5ff,#f0f8ff);border:1px solid #d9ddff;border-radius:13px;padding:20px;min-height:100px;font-size:20px;line-height:1.45;font-weight:750;letter-spacing:-.025em;overflow-wrap:anywhere;margin:13px 0 12px;color:#17123e}.output:before{content:"NAMA PRODUK / JASA";display:block;font-size:9px;letter-spacing:.15em;font-weight:850;color:#6a62a7;margin-bottom:9px}.status{font-size:12px;min-height:20px;margin-top:9px;color:#147d48}.notice{background:#fff9ec;border:1px solid #f4e3b8;border-left:3px solid #e9b84d;border-radius:10px;padding:13px 14px;font-size:12px;line-height:1.65;color:#73551c;margin-top:20px}details{border:1px solid #e5e9f2;border-radius:12px;padding:14px 15px;margin-top:13px;background:#fbfcff}summary{cursor:pointer;font-weight:750;font-size:13px;color:#29334b}details[open] summary{margin-bottom:12px}.hint{font-size:11.5px;color:var(--muted);margin-top:6px;line-height:1.5}.checkgrid{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:8px}.check{display:flex;gap:9px;align-items:center;border:1px solid #e4e8f1;border-radius:10px;padding:10px 11px;font-size:12px;font-weight:600;color:#45516a;margin:0;background:#fcfdff;transition:border-color .15s,background .15s}.check:has(input:checked){border-color:#a79af0;background:#f5f2ff}.check input{width:15px;height:15px;accent-color:var(--p);margin:0;flex:0 0 auto}.hidden{display:none!important}ul{padding-left:19px;font-size:12px;color:#58647a;line-height:1.75}hr{opacity:.7}footer{text-align:center;color:#818aa0;font-size:11px;letter-spacing:.08em;padding:22px 15px 28px}
+@media(min-width:1000px){.layout>section:nth-child(2){position:sticky;top:16px}}@media(max-width:760px){header{padding:23px 17px 22px}.layout,.row{grid-template-columns:1fr}.card{padding:17px;border-radius:15px}.layout{gap:12px}main{margin-top:15px;padding:0 12px 28px}.checkgrid{grid-template-columns:1fr 1fr}.output{font-size:18px;padding:16px}.wrap h2{font-size:24px!important}}@media(max-width:420px){.checkgrid{grid-template-columns:1fr}.tabs{width:100%}.tabs button{flex:1}}
+.codepill{font-family:ui-monospace,SFMono-Regular,Consolas,monospace;font-weight:800;letter-spacing:.02em;color:var(--p)}#codeWrap{margin-top:12px;padding:14px;border:1px solid #e1e5f2;border-radius:12px;background:#fbfcff}.service-note{padding:12px 14px;border:1px solid #cbeeff;background:#f2fbff;border-radius:10px;color:#24566a;font-size:12px;margin-top:14px}.hidden{display:none!important}
+/* Kasmin Pratama professional profile visual language — presentation only */
+:root{--p:#4532a8;--b:#3047a8;--s:#55c9ee;--ink:#17191f;--muted:#707580;--line:#e4e5e8;--bg:#f7f7f5;--white:#fff;--shadow:0 8px 28px rgba(18,22,33,.045);--radius:14px}
+body{background:#f7f7f5;color:#17191f;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;font-size:14px}
+header{background:#111318;color:#fff;padding:0 24px 43px;border:0;position:relative}
+header:before{content:"";position:absolute;inset:auto 0 0;height:3px;background:linear-gradient(90deg,#2e00a9 0%,#2d51cc 55%,#2ac3fd 100%)}
+header:after{width:300px;height:300px;right:-130px;top:90px;border-color:rgba(255,255,255,.055);box-shadow:0 0 0 40px rgba(255,255,255,.018),0 0 0 80px rgba(255,255,255,.012)}
+.wrap{max-width:1120px}.sitebar{height:76px;border-bottom:1px solid rgba(255,255,255,.14);display:flex;align-items:center;justify-content:space-between;gap:20px;position:relative;z-index:2}
+.sitebrand{color:#fff;text-decoration:none;font-size:13px;font-weight:850;letter-spacing:.13em}.sitebrand span{font-weight:400;margin-left:5px;color:#c9ccd4}.backlink{color:#c4c7cf;text-decoration:none;font-size:12px}.backlink:hover{color:#fff}
+.eyebrow{display:flex;justify-content:space-between;gap:15px;margin-top:38px;color:#aeb3bf;font-size:10px;letter-spacing:.15em;font-weight:700}.eyebrow span{color:#8f94a0}
+.wrap h1{font-size:clamp(36px,6vw,62px);letter-spacing:-.055em;line-height:1.03;margin:24px 0 14px;font-weight:720;position:relative;z-index:1}.wrap h1 em{font-style:normal;color:#b9c7ff}.wrap h2{display:none}.wrap h2:before{display:none}.hero-copy{color:#c5c8d0;font-size:15px;max-width:580px;margin:0;position:relative;z-index:1}.hero-foot{margin-top:28px;color:#9fa4b0;font-size:10px;letter-spacing:.12em;font-weight:700;display:flex;align-items:center;gap:9px;position:relative;z-index:1}.live-dot{width:6px;height:6px;border-radius:50%;background:#55c9ee;box-shadow:0 0 0 4px rgba(85,201,238,.12)}.hero-sep{color:#535866}
+main{max-width:1160px;margin:26px auto;padding:0 22px 48px}.intro-row{display:flex;justify-content:space-between;align-items:center;gap:20px;margin:0 0 20px}.intro-row .muted{margin:0;max-width:720px}.version-tag{font-size:9px;letter-spacing:.1em;font-weight:800;color:#626875;border:1px solid #dfe1e5;padding:7px 10px;border-radius:4px;white-space:nowrap}
+.tabs{background:#ececef;border:1px solid #e3e4e7;border-radius:8px;padding:4px;margin:0 0 14px}.tab{border-radius:5px;padding:10px 18px}.tab.active{background:#17191f;color:#fff;box-shadow:none}.layout{gap:14px}.card{border-color:#e4e5e8;border-radius:12px;padding:22px;box-shadow:0 6px 22px rgba(18,22,33,.035)}.card h2{font-size:15px;letter-spacing:-.01em}.card h2:before{background:#292d38;width:3px;height:16px}.card label{color:#353945}input,select,textarea{border-color:#dfe1e6;border-radius:7px;padding:11px 12px;background:#fff}input:focus,select:focus,textarea:focus{border-color:#7770b9;box-shadow:0 0 0 3px rgba(69,50,168,.08)}button{border-radius:7px;min-height:40px}.tab{min-height:36px}.primary{background:#22252d;box-shadow:none}.primary:hover:not(:disabled){box-shadow:0 5px 14px rgba(17,19,24,.12)}.secondary{background:#f5f5f6;border-color:#e0e1e5;color:#30343d}.sky{background:#edfaff;border-color:#c9effb;color:#164c5d}.output{background:#f4f3fa;border-color:#dedbed;border-radius:9px;color:#26233d}.output:before{color:#77708e}.notice{background:#fbf7ed;border-color:#f0e4c9;border-left-color:#c49b46;border-radius:7px;color:#66532c}.check{border-radius:7px}.check:has(input:checked){border-color:#b5afe0;background:#f4f2fb}details{border-radius:8px;background:#fbfbfa;border-color:#e5e6e8}footer{max-width:1120px;margin:auto;display:flex;justify-content:space-between;gap:18px;align-items:center;border-top:1px solid #e3e4e6;color:#858993;font-size:9px;letter-spacing:.1em}footer span:first-child{color:#30343d;font-weight:800}footer a{color:#545965;text-decoration:none}
+@media(max-width:760px){header{padding:0 17px 31px}.sitebar{height:64px}.eyebrow{margin-top:28px;font-size:9px}.wrap h1{font-size:clamp(36px,10vw,48px);margin-top:20px}.hero-copy{font-size:14px}.hero-foot{font-size:9px;flex-wrap:wrap}.intro-row{align-items:flex-start;flex-direction:column;gap:10px}.version-tag{white-space:normal}main{padding:0 12px 32px}.card{padding:17px}.layout{gap:12px}footer{padding:20px 12px 26px;flex-wrap:wrap;justify-content:flex-start}footer a{margin-left:auto}}
+@media(max-width:420px){.backlink{font-size:11px}.eyebrow{letter-spacing:.08em}.eyebrow span{max-width:44%;text-align:right}.tabs{width:100%}.tabs button{flex:1}.card h2{font-size:14px}}
+
+</style></head>
+<body>
+<header><div class="wrap"><div class="sitebar"><a class="sitebrand" href="/" aria-label="Kembali ke Kasmin Pratama">KASMIN<span>PRATAMA</span></a><a class="backlink" href="/">← Profil profesional</a></div><div class="eyebrow">MIVISION / INTERNAL TOOL <span>01 — NAMING SYSTEM</span></div><h1>Product &amp; Service<br><em>Naming System.</em></h1><p class="hero-copy">Standarisasi nama Produk dan Jasa sebelum dimasukkan ke aplikasi POS.</p><div class="hero-foot"><span class="live-dot"></span> TOOL OPERASIONAL MIVISION <span class="hero-sep">/</span> OFFLINE-CAPABLE</div></div></header>
+<main>
+<div class="intro-row"><p class="muted">Susun nama dengan format yang konsisten, lalu salin ke PagoPOS. Aplikasi ini tidak mengubah data PagoPOS.</p><span class="version-tag">MIVISION · NAMING STANDARD</span></div>
+<div class="tabs"><button id="tp" class="tab active" type="button">Produk</button><button id="ts" class="tab" type="button">Jasa</button></div>
+<div class="layout">
+<section class="card">
+<h2 id="heading">Informasi produk</h2>
+<label for="type">Tipe</label><select id="type"></select>
+<div id="brandModel" class="row"><div><label for="brand">Merek</label><input id="brand" list="brands" placeholder="Pilih atau ketik merek"><datalist id="brands"></datalist></div><div><label for="model">Model / kode</label><input id="model" placeholder="Sesuai label atau pricelist"></div></div>
+<div id="fields"></div>
+<div id="featureSection"><label>Fitur kamera terverifikasi (opsional)</label><div class="hint">Pilih hanya fitur yang tercantum di pricelist/datasheet model ini. Jenis kamera dan spesifikasi tambahan bersifat opsional.</div><div id="features" class="checkgrid"></div></div>
+<div id="serviceInfo" class="service-note hidden">Kode dan satuan dibuat berdasarkan aturan internal MIVISION. Untuk reposisi DVR/NVR, jumlah kamera berarti kamera yang terhubung sebelum reposisi. Harga setiap kombinasi ditetapkan secara terpisah.</div>
+<div id="extraWrap"><label for="extra">Informasi pembeda lain (opsional)</label><input id="extra" placeholder="Hanya informasi terverifikasi"><div class="hint">Jangan ulangi model atau fitur yang sudah dipilih.</div></div>
+<div class="actions"><button class="primary" id="make" type="button">Buat nama baku</button><button class="secondary" id="clear" type="button">Bersihkan</button></div>
+<div class="notice">Aplikasi tidak memverifikasi spesifikasi secara otomatis. Cocokkan dengan datasheet/pricelist resmi. Untuk kamera, Indoor/Outdoor, bentuk kamera, resolusi, lensa, IR, WDR, proteksi, audio, dan PoE hanya dicantumkan jika didukung sumber. Jangan masukkan nomor seri unit ke nama barang. SKU/barcode, stok, satuan transaksi, dan pelacakan serial number diatur terpisah di Pago POS sesuai fitur dan konfigurasi yang tersedia.</div>
+</section>
+<section class="card">
+<h2>Hasil nama baku</h2><div class="muted">Nama, kode, dan satuan dibuat sesuai aturan kategori. Harga tidak ditebak dan harus diisi berdasarkan tarif yang disetujui.</div>
+<div id="output" class="output" aria-live="polite">Nama baku akan tampil di sini.</div><div id="codeWrap" class="hidden"><label for="itemCode">Kode item jasa</label><div class="row"><input id="itemCode" readonly value=""><button id="copyCode" class="secondary" type="button">Salin kode</button></div><label for="servicePrice">Harga jasa (Rp, opsional)</label><input id="servicePrice" type="number" min="0" step="1000" placeholder="Isi hanya setelah tarif disetujui"><div class="hint">Harga tidak masuk ke nama. Harga yang diisi di sini hanya untuk referensi saat trial; tidak otomatis masuk ke Pago POS.</div><div id="unitDisplay" class="hint"></div></div>
+<div class="actions"><button id="copy" class="primary" type="button" disabled>Salin nama</button><button id="upper" class="secondary" type="button" disabled>Salin HURUF BESAR</button></div><div id="status" class="status" aria-live="polite"></div>
+<hr style="border:0;border-top:1px solid var(--line);margin:15px 0"><h2>Aturan penamaan</h2>
+<ul><li>Jenis produk/jasa ditulis lebih dahulu.</li><li>Merek dan model mengikuti label/pricelist.</li><li>Spesifikasi opsional hanya dicantumkan jika diketahui dan relevan.</li><li>Untuk kamera, cantumkan Indoor atau Outdoor jika klasifikasi pemasangan didukung datasheet/pricelist resmi. Jika model dinyatakan untuk keduanya, gunakan Indoor/Outdoor; jangan menebak berdasarkan bentuk kamera.</li><li>Urutan kamera: Kamera CCTV + Teknologi + Indoor/Outdoor (jika diketahui) + Merek + Model + Resolusi + spesifikasi terverifikasi. Bentuk kamera dan jenis lensa adalah atribut terpisah.</li><li>Untuk switch, gunakan istilah Port. Jika ada beberapa tipe port, tulis komposisi persis dari datasheet, misalnya '4 port PoE + 2 port SFP'. Jangan menyebut port switch sebagai Channel.</li><li>Istilah Channel digunakan untuk kanal kamera pada DVR/XVR/NVR jika jumlahnya tercantum di sumber.</li><li>Jangan masukkan nomor seri unit ke nama produk.</li><li>Jasa: gunakan kode prefix kategori. Harga tidak dimasukkan ke nama. Setiap variasi harga berbeda wajib memiliki kode unik.</li><li>Reposisi kamera dihitung per kamera. Reposisi DVR/NVR dibedakan menurut kapasitas recorder dan jumlah kamera terhubung sebelum reposisi.</li><li>Instalasi kamera dan kabel dihitung per titik; kabel sebagai barang dicatat terpisah.</li><li>Harga jasa tidak dibuat otomatis dan harus mengikuti tarif yang disetujui MIVISION.</li><li>Format tipe kustom: 'Jenis + Model' benar-benar hanya memakai jenis dan model; format standar memakai jenis, merek, model, dan spesifikasi yang diisi.</li><li>Nama yang dihasilkan tetap perlu diperiksa sebelum disalin.</li></ul>
+<details><summary>Kelola merek trial</summary><label for="newbrand">Tambah merek</label><div class="row"><input id="newbrand" placeholder="Nama merek"><button class="sky" id="addbrand" type="button">Tambah</button></div><div class="hint">Tersimpan hanya di browser ini.</div></details>
+<details><summary>Tambah tipe kustom</summary><label for="newtype">Nama tipe</label><input id="newtype" placeholder="Contoh: Bracket CCTV"><div class="row"><div><label for="newgroup">Kelompok</label><select id="newgroup"><option value="product">Produk</option><option value="service">Jasa</option></select></div><div><label for="pattern">Format</label><select id="pattern"><option value="standard">Jenis + Merek + Model + spesifikasi</option><option value="model">Jenis + Model</option><option value="service">Jasa + lingkup pekerjaan</option></select></div></div><button class="sky" id="addtype" type="button" style="margin-top:12px">Tambah tipe</button><div class="hint">Format Jenis + Model memakai nama tipe dan model saja. Format standar memakai jenis, merek, model, dan spesifikasi yang diisi. Untuk kelompok Jasa, format otomatis memakai nama jasa, lingkup pekerjaan, dan satuan bila diisi.</div></details>
+</section></div>
+<details style="margin-top:15px"><summary>Catatan hasil trial</summary><p class="muted">Catatan disimpan lokal di browser.</p><textarea id="notes" rows="3" placeholder="Contoh: perlu aturan nama untuk kabel UTP per meter..."></textarea><div class="actions"><button id="savenotes" class="secondary" type="button">Simpan catatan</button><button id="export" class="secondary" type="button">Unduh catatan TXT</button><button id="backup" class="sky" type="button">Ekspor data aplikasi</button><button id="importBtn" class="secondary" type="button">Impor data aplikasi</button><input id="importFile" type="file" accept="application/json,.json" class="hidden"></div><div id="backupStatus" class="status"></div><div id="ns" class="status"></div></details>
+</main><footer><span>KASMIN PRATAMA</span><span>MIVISION · PRODUCT &amp; SERVICE NAMING</span><a href="/">Kembali ke profil ↗</a></footer>
+<script>
+(()=>{
+const base={
+product:[
+{name:'Kamera CCTV',fields:[['Penempatan (jika terverifikasi)',['Indoor','Outdoor','Indoor/Outdoor'],'placement'],['Bentuk kamera (opsional)',['Bullet','Dome','Turret','Eyeball','PTZ'],'cameraType'],['Teknologi',['Analog','IP','WiFi'],'tech'],['Resolusi',['2 MP','3 MP','4 MP','5 MP','6 MP','8 MP','12 MP'],'resolution'],['Jenis lensa (opsional)',['Fixed Lens','Motorized Lens'],'lensType'],['Spesifikasi lensa (opsional)',[],'lens'],['Jarak IR / cahaya (opsional)',[],'nightRange'],['WDR (opsional)',['DWDR','Digital WDR','120 dB WDR','140 dB WDR'],'wdr'],['Proteksi (opsional)',['IP54','IP65','IP66','IP67','IP68','IK08','IK10'],'protection']]},
+{name:'DVR / XVR',fields:[['Jumlah channel',['4 Channel','8 Channel','16 Channel','32 Channel'],'channels'],['Kemampuan perekaman (opsional)',[],'recording']]},
+{name:'NVR',fields:[['Jumlah channel',['4 Channel','8 Channel','16 Channel','32 Channel'],'channels'],['Kemampuan perekaman (opsional)',[],'recording']]},
+{name:'HDD Surveillance',fields:[['Kapasitas',['1 TB','2 TB','4 TB','6 TB','8 TB'],'capacity']]},
+{name:'Router',fields:[['Spesifikasi utama (opsional)',[],'spec']]},
+{name:'Switch Jaringan',fields:[['Jumlah dan jenis port (sesuai datasheet)',[],'ports'],['Dukungan PoE (opsional)',['PoE','Non-PoE'],'poe']]},
+{name:'Access Point',fields:[['Standar / jenis (opsional)',[],'standard']]},
+{name:'Gateway Jaringan',fields:[['Spesifikasi utama (opsional)',[],'spec']]},
+{name:'Kabel Jaringan',fields:[['Kategori / material (opsional)',[],'cable'],['Panjang / kemasan (opsional)',[],'length']]},
+{name:'Kabel Fiber Optik',fields:[['Tipe kabel (opsional)',[],'cable'],['Jumlah core / panjang (opsional)',[],'length']]},
+{name:'Power Supply',fields:[['Tegangan / arus (opsional)',[],'power']]},
+{name:'Perangkat Starlink',fields:[['Generasi / tipe (opsional)',[],'version']]},
+{name:'Aksesori CCTV',fields:[['Jenis aksesori (opsional)',[],'accessory']]},
+{name:'Aksesori Jaringan',fields:[['Jenis aksesori (opsional)',[],'accessory']]},
+{name:'Produk Lain',fields:[['Spesifikasi pembeda (opsional)',[],'spec']]}
+],
+service:[
+{name:'Jasa Reposisi Kamera CCTV',fields:[['Jenis kamera',['Analog','IP','WiFi'],'cameraType'],['Satuan harga',['Per kamera'],'unit']]},
+{name:'Jasa Reposisi DVR/NVR',fields:[['Jenis recorder',['DVR','NVR'],'recorder'],['Kapasitas recorder',['4 Channel','8 Channel','16 Channel'],'capacity'],['Jumlah kamera terhubung sebelum reposisi',['2','3','4','5','6','7','8','9','10','11','12','13','14','15','16'],'cameraCount']]},
+{name:'Jasa Instalasi Kamera CCTV',fields:[['Jenis kamera',['Analog','IP','WiFi'],'cameraType'],['Satuan harga',['Per titik'],'unit']]},
+{name:'Jasa Instalasi DVR/NVR',fields:[['Jenis recorder',['DVR','NVR'],'recorder'],['Kapasitas recorder',['4 Channel','8 Channel','16 Channel'],'capacity'],['Satuan harga',['Per unit'],'unit']]},
+{name:'Jasa Instalasi Kabel CCTV',fields:[['Satuan jasa',['Per titik'],'unit']]},
+{name:'Jasa Instalasi Kabel Jaringan',fields:[['Satuan jasa',['Per titik'],'unit']]},
+{name:'Jasa Instalasi Fiber Optic',fields:[['Lingkup pekerjaan',[],'scope'],['Satuan harga',['Per pekerjaan','Per titik'],'unit']]},
+{name:'Jasa Maintenance Kamera CCTV',fields:[['Jenis kamera',['Analog','IP','WiFi'],'cameraType'],['Pekerjaan maintenance',['Pembersihan','Pemeriksaan','Pengujian fungsi'],'work']]},
+{name:'Jasa Maintenance DVR/NVR',fields:[['Jenis recorder',['DVR','NVR'],'recorder'],['Kapasitas recorder',['4 Channel','8 Channel','16 Channel'],'capacity'],['Pekerjaan maintenance',['Pembersihan','Pemeriksaan','Pengujian rekaman dan playback','Pemeriksaan penyimpanan'],'work']]},
+{name:'Jasa Maintenance Sistem CCTV',fields:[['Jenis sistem',['CCTV Analog (DVR)','CCTV IP (NVR)','Sistem CCTV WiFi'],'system'],['Pekerjaan maintenance',['Pemeriksaan sistem','Pengujian rekaman dan playback','Pemeriksaan koneksi dan akses jarak jauh'],'work']]},
+{name:'Jasa Maintenance Jaringan',fields:[['Perangkat jaringan',['Router/Gateway','Switch','Access Point','Fiber Optic'],'device'],['Pekerjaan maintenance',['Pembersihan','Pemeriksaan','Pengujian konektivitas'],'work']]},
+{name:'Jasa Perbaikan Kamera CCTV',fields:[['Jenis kamera',['Analog','IP','WiFi'],'cameraType'],['Pekerjaan perbaikan',[],'work']]},
+{name:'Jasa Perbaikan DVR/NVR',fields:[['Jenis recorder',['DVR','NVR'],'recorder'],['Kapasitas recorder',['4 Channel','8 Channel','16 Channel'],'capacity'],['Pekerjaan perbaikan',[],'work']]},
+{name:'Jasa Perbaikan Jaringan',fields:[['Perangkat jaringan',['Router/Gateway','Switch','Access Point','Fiber Optic'],'device'],['Pekerjaan perbaikan',[],'work']]},
+{name:'Jasa Konfigurasi',fields:[['Perangkat/sistem',['DVR','NVR','Kamera IP','Kamera WiFi','Router/Gateway','Switch/VLAN','Access Point','Akses jarak jauh CCTV'],'device'],['Lingkup konfigurasi',[],'scope']]},
+{name:'Jasa Pemasangan Komponen',fields:[['Komponen',['Harddisk DVR/NVR','Power Supply CCTV','Konektor CCTV','Komponen jaringan'],'component'],['Tindakan',['Pasang','Ganti'],'action']]},
+{name:'Jasa Survey',fields:[['Lingkup survey',['Lokasi CCTV','Infrastruktur jaringan','Perencanaan sistem'],'scope'],['Satuan harga',['Per lokasi','Per pekerjaan'],'unit']]},
+{name:'Jasa Mobilisasi/Kunjungan Teknisi',fields:[['Jenis layanan',['Mobilisasi teknisi','Kunjungan teknisi'],'serviceType'],['Satuan harga',['Per kunjungan','Per lokasi','Per hari'],'unit']]},
+{name:'Jasa Lainnya',fields:[['Lingkup pekerjaan',[],'scope'],['Satuan harga',['Per titik','Per perangkat','Per meter','Per kunjungan','Per hari','Per pekerjaan'],'unit']]}
+]
+};
+const defaultBrands=['Dahua','Hikvision','HiLook','Tiandy','Ezviz','Imou','Bardi','UNV','Ruijie','MikroTik','Cisco','TP-Link','Linksys','Starlink','Mean Well','Seagate','Western Digital'];
+const cameraFeatures=['Audio / Mikrofon','PoE','Color Night Vision','Full Color','IR Night Vision','Built-in Speaker','Slot MicroSD','Human Detection','Motion Detection'];
+let group='product', customTypes=read('mv3_types',[]), customBrands=read('mv3_brands',[]), outputName='';
+const $=id=>document.getElementById(id);
+function read(k,d){try{return JSON.parse(localStorage.getItem(k))??d}catch(e){return d}}
+function save(k,v){try{localStorage.setItem(k,JSON.stringify(v))}catch(e){}}
+function clean(v){return (v||'').trim().replace(/\s+/g,' ')}
+function esc(v){return String(v).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
+function types(){return [...base[group].map(t=>({...t,group,pattern:group==='service'?'service':'standard'})),...customTypes.filter(t=>t.group===group)]}
+function selectedType(){return types().find(t=>t.name===$('type').value)}
+function renderBrands(){let a=[...new Set([...defaultBrands,...customBrands])].sort((x,y)=>x.localeCompare(y));$('brands').innerHTML=a.map(x=>`<option value="${esc(x)}"></option>`).join('')}
+function renderTypes(){let a=types();$('type').innerHTML=a.map(t=>`<option value="${esc(t.name)}">${esc(t.name)}</option>`).join('');renderFields();resetOutput()}
+function renderFields(){
+ const t=selectedType();if(!t)return;
+ $('fields').innerHTML=(t.fields||[]).map((f,i)=>{let id='field'+i;let options=f[1]||[];
+ if(options.length)return `<label for="${id}">${esc(f[0])}</label><select id="${id}" data-key="${esc(f[2])}"><option value="">Pilih jika diketahui</option>${options.map(v=>`<option value="${esc(v)}">${esc(v)}</option>`).join('')}</select>`;
+ return `<label for="${id}">${esc(f[0])}</label><input id="${id}" data-key="${esc(f[2])}" placeholder="Isi lingkup pekerjaan secara spesifik">`;
+ }).join('');
+ const isCamera=t.name==='Kamera CCTV'&&group==='product';
+ $('featureSection').classList.toggle('hidden',!isCamera);
+ $('extraWrap').classList.toggle('hidden',group==='service');
+ $('brandModel').classList.toggle('hidden',group==='service');
+ $('serviceInfo').classList.toggle('hidden',group!=='service');
+ $('codeWrap').classList.add('hidden');
+ if(isCamera)$('features').innerHTML=cameraFeatures.map((f,i)=>`<label class="check"><input type="checkbox" value="${esc(f)}" name="cameraFeature"><span>${esc(f)}</span></label>`).join('');
+ const capacity=$('fields').querySelector('[data-key="capacity"]');
+ const count=$('fields').querySelector('[data-key="cameraCount"]');
+ function syncCounts(){if(!capacity||!count)return;const max=parseInt((capacity.value.match(/\d+/)||[])[0]||'0',10);const old=count.value;[...count.options].forEach((o,i)=>{if(i===0)return;const num=parseInt(o.value,10);o.disabled=!max||num>max;});if(old&&parseInt(old,10)>max)count.value='';}
+ if(capacity&&count){capacity.addEventListener('change',syncCounts);syncCounts();}
+}
+function resetOutput(){outputName='';$('output').textContent='Nama baku akan tampil di sini.';$('copy').disabled=$('upper').disabled=true;$('status').textContent='';$('codeWrap').classList.add('hidden');$('itemCode').value='';$('servicePrice').value='';$('unitDisplay').textContent=''}
+function setGroup(g){group=g;$('tp').classList.toggle('active',g==='product');$('ts').classList.toggle('active',g==='service');$('heading').textContent=g==='product'?'Informasi produk':'Informasi jasa';renderTypes()}
+function values(){let o={};document.querySelectorAll('#fields input,#fields select').forEach(el=>{let v=clean(el.value);if(v)o[el.dataset.key]=v});return o}
+function uniqParts(parts){let seen=new Set();return parts.map(clean).filter(Boolean).filter(x=>{let k=x.toLocaleLowerCase('id-ID');if(seen.has(k))return false;seen.add(k);return true})}
+function makeName(){
+ const t=selectedType();if(!t)return;
+ const v=values(),brand=clean($('brand').value),model=clean($('model').value),extra=clean($('extra').value);
+ const scope=v.scope||'', features=[...document.querySelectorAll('input[name="cameraFeature"]:checked')].map(x=>x.value);
+ let parts=[];
+ let itemCode='';
+ if(group==='service'){
+   const required=Object.entries(v).filter(([k,val])=>!val);
+   if(t.name==='Jasa Reposisi DVR/NVR'){
+     if(!v.recorder||!v.capacity||!v.cameraCount){setStatus('Pilih jenis recorder, kapasitas, dan jumlah kamera terhubung.','#9a6700');return}
+     const max=parseInt((v.capacity.match(/\d+/)||[])[0],10),count=parseInt(v.cameraCount,10);
+     if(count<2||count>max){setStatus('Jumlah kamera harus 2 sampai sesuai kapasitas recorder.','#9a6700');return}
+     if(v.recorder==='DVR'&&count>max){setStatus('Jumlah kamera melebihi kapasitas DVR.','#9a6700');return}
+     if(v.recorder==='NVR')parts=[t.name.replace('DVR/NVR','NVR'),v.capacity,'—',v.cameraCount+' Kamera IP Terhubung'];
+     else parts=[t.name.replace('DVR/NVR','DVR'),v.capacity,'—',v.cameraCount+' Kamera Analog Terhubung'];
+     itemCode=`JRS-REP-${v.recorder}-${String(max).padStart(2,'0')}-${String(count).padStart(2,'0')}${v.recorder==='DVR'?'ANL':'IP'}`;
+   }else{
+     const controls=[...document.querySelectorAll('#fields input,#fields select')];if(controls.some(el=>!clean(el.value))){setStatus('Lengkapi semua pilihan atau lingkup pekerjaan untuk jasa ini.','#9a6700');const missing=controls.find(el=>!clean(el.value));if(missing)missing.focus();return}
+     if(t.name==='Jasa Reposisi Kamera CCTV'){
+       parts=[t.name,v.cameraType];itemCode='JRS-REP-CAM-'+({'Analog':'ANL','IP':'IP','WiFi':'WIFI'}[v.cameraType]||'OTH');
+     }else if(t.name==='Jasa Instalasi Kamera CCTV'){
+       parts=[t.name,v.cameraType];itemCode='JRS-INS-CAM-'+({'Analog':'ANL','IP':'IP','WiFi':'WIFI'}[v.cameraType]||'OTH');
+     }else if(t.name==='Jasa Instalasi DVR/NVR'){
+       parts=['Jasa Instalasi',v.recorder,v.capacity];itemCode=`JRS-INS-${v.recorder}-${String(parseInt(v.capacity,10)).padStart(2,'0')}`;
+     }else{
+       const details=Object.values(v);parts=[t.name,...details];
+       const cat=({'Jasa Instalasi Kabel CCTV':'INS-CAB-CCTV','Jasa Instalasi Kabel Jaringan':'INS-CAB-LAN','Jasa Instalasi Fiber Optic':'INS-FO','Jasa Maintenance Kamera CCTV':'MTC-CAM','Jasa Maintenance DVR/NVR':'MTC-REC','Jasa Maintenance Sistem CCTV':'MTC-SYS','Jasa Maintenance Jaringan':'MTC-NET','Jasa Perbaikan Kamera CCTV':'RPR-CAM','Jasa Perbaikan DVR/NVR':'RPR-REC','Jasa Perbaikan Jaringan':'RPR-NET','Jasa Konfigurasi':'CFG','Jasa Pemasangan Komponen':'CMP','Jasa Survey':'SRV','Jasa Mobilisasi/Kunjungan Teknisi':'MOB','Jasa Lainnya':'OTH'}[t.name]||'OTH');
+       const slug=details.map(x=>String(x).normalize('NFD').replace(/[\u0300-\u036f]/g,'').toUpperCase().replace(/[^A-Z0-9]+/g,'-').replace(/^-|-$/g,'')).filter(Boolean).join('-').slice(0,32);
+       itemCode='JRS-'+cat+'-'+(slug||'UMUM');
+     }
+   }
+   $('codeWrap').classList.remove('hidden');$('itemCode').value=itemCode;
+   const unit=v.unit||({'Jasa Reposisi Kamera CCTV':'Per kamera','Jasa Instalasi Kamera CCTV':'Per titik','Jasa Instalasi DVR/NVR':'Per unit','Jasa Instalasi Kabel CCTV':'Per titik','Jasa Instalasi Kabel Jaringan':'Per titik','Jasa Reposisi DVR/NVR':'Per sistem','Jasa Maintenance DVR/NVR':'Per pekerjaan'}[t.name]||'Per pekerjaan');
+   $('unitDisplay').textContent='Satuan harga: '+unit+'. Harga jasa tidak dimasukkan ke nama item.';
+ }else if(t.pattern==='model'){
+   if(!model){setStatus('Tipe kustom dengan format Jenis + Model memerlukan Model / kode.','#9a6700');$('model').focus();return}
+   parts=[t.name,model];
+ }else if(t.name==='Kamera CCTV'){
+   parts=['Kamera CCTV',v.tech,v.placement,brand,model,v.resolution,v.cameraType,v.lensType,v.lens,v.nightRange,v.wdr,v.protection,...features,extra];
+ }else if(t.name==='DVR / XVR'){
+   parts=['DVR/XVR',brand,model,v.channels,v.recording,extra];
+ }else if(t.name==='NVR'){
+   parts=['NVR',brand,model,v.channels,v.recording,extra];
+ }else if(t.name==='HDD Surveillance'){
+   parts=['HDD Surveillance',brand,model,v.capacity,extra];
+ }else if(t.name==='Router'||t.name==='Gateway Jaringan'){
+   parts=[t.name,brand,model,v.spec,extra];
+ }else if(t.name==='Switch Jaringan'){
+   parts=['Switch Jaringan',brand,model,v.ports,v.poe,extra];
+ }else if(t.name==='Access Point'){
+   parts=['Access Point',brand,model,v.standard,extra];
+ }else if(t.name==='Kabel Jaringan'){
+   parts=['Kabel Jaringan',brand,model,v.cable,v.length,extra];
+ }else if(t.name==='Kabel Fiber Optik'){
+   parts=['Kabel Fiber Optik',brand,model,v.cable,v.length,extra];
+ }else if(t.name==='Power Supply'){
+   parts=['Power Supply',brand,model,v.power,extra];
+ }else if(t.name==='Perangkat Starlink'){
+   parts=['Perangkat Starlink',brand,model,v.version,extra];
+ }else{
+   parts=[t.name,brand,model,...Object.values(v),extra];
+ }
+ parts=uniqParts(parts);
+ if(!parts.length){setStatus('Masukkan informasi produk terlebih dahulu.','#9a6700');return}
+ if(!model&&!brand&&!Object.values(v).length&&!extra){setStatus('Isi setidaknya model, merek, atau informasi pembeda yang diketahui.','#9a6700');return}
+ outputName=parts.join(' ').replace(/\s+/g,' ').trim();
+ $('output').textContent=outputName;$('copy').disabled=$('upper').disabled=false;
+ setStatus('Nama dibuat. Periksa model dan spesifikasi pada sumber resmi sebelum digunakan.','#147d48');
+}
+function setStatus(msg,color){$('status').textContent=msg;$('status').style.color=color||'#147d48'}
+async function copyText(text){try{await navigator.clipboard.writeText(text);setStatus('Tersalin. Silakan tempel ke Pago POS.','#147d48')}catch(e){let ta=document.createElement('textarea');ta.value=text;document.body.appendChild(ta);ta.select();let ok=false;try{ok=document.execCommand('copy')}catch(_){}ta.remove();setStatus(ok?'Tersalin. Silakan tempel ke Pago POS.':'Salin manual dari kotak hasil.',ok?'#147d48':'#9a6700')}}
+function clearForm(){ $('brand').value='';$('model').value='';$('extra').value='';$('servicePrice').value='';renderFields();document.querySelectorAll('input[name="cameraFeature"]').forEach(x=>x.checked=false);resetOutput()}
+$('tp').addEventListener('click',()=>setGroup('product'));$('ts').addEventListener('click',()=>setGroup('service'));
+$('type').addEventListener('change',()=>{renderFields();resetOutput()});$('make').addEventListener('click',makeName);$('clear').addEventListener('click',clearForm);
+$('copy').addEventListener('click',()=>outputName&&copyText(outputName));
+$('copyCode').addEventListener('click',()=>{const c=$('itemCode').value;if(c)copyText(c)});$('upper').addEventListener('click',()=>outputName&&copyText(outputName.toLocaleUpperCase('id-ID')));
+$('addbrand').addEventListener('click',()=>{let b=clean($('newbrand').value);if(!b)return alert('Masukkan nama merek.');if([...defaultBrands,...customBrands].some(x=>x.toLocaleLowerCase('id-ID')===b.toLocaleLowerCase('id-ID')))return alert('Merek sudah tersedia.');customBrands.push(b);save('mv3_brands',customBrands);renderBrands();$('brand').value=b;$('newbrand').value='';alert('Merek ditambahkan untuk trial lokal.')});
+$('addtype').addEventListener('click',()=>{let name=clean($('newtype').value),g=$('newgroup').value,p=$('pattern').value;if(g==='service')p='service';else if(p==='service')p='standard';if(!name)return alert('Masukkan nama tipe.');if([...base.product,...base.service,...customTypes].some(t=>t.name.toLocaleLowerCase('id-ID')===name.toLocaleLowerCase('id-ID')))return alert('Tipe sudah tersedia.');let fields=g==='service'?[['Lingkup pekerjaan',[],'scope'],['Satuan penjualan (opsional)',['per titik','per perangkat','per meter','per kunjungan','per hari','lumpsum'],'unit']]:[['Spesifikasi pembeda (opsional)',[],'spec']];customTypes.push({name,group:g,pattern:p,fields});save('mv3_types',customTypes);$('newtype').value='';if(g===group)renderTypes();alert('Tipe ditambahkan untuk trial.')});
+$('savenotes').addEventListener('click',()=>{save('mv3_notes',$('notes').value);$('ns').textContent='Catatan tersimpan di browser ini.'});
+$('export').addEventListener('click',()=>{let blob=new Blob(['MIVISION — CATATAN TRIAL\n\n'+$('notes').value+'\n'],{type:'text/plain;charset=utf-8'});let a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='MIVISION-catatan-trial.txt';a.click();setTimeout(()=>URL.revokeObjectURL(a.href),1000)});
+$('backup').addEventListener('click',()=>{const data={format:'MIVISION-NAMING-BACKUP',version:1,exportedAt:new Date().toISOString(),localStorage:{}};for(let i=0;i<localStorage.length;i++){const k=localStorage.key(i);if(k&&k.startsWith('mv3_'))data.localStorage[k]=localStorage.getItem(k)}const blob=new Blob([JSON.stringify(data,null,2)],{type:'application/json'});const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='MIVISION-Naming-System-backup.json';a.click();setTimeout(()=>URL.revokeObjectURL(a.href),1000);$('backupStatus').textContent='File backup aplikasi diunduh.'});
+$('importBtn').addEventListener('click',()=>$('importFile').click());
+$('importFile').addEventListener('change',async e=>{const f=e.target.files&&e.target.files[0];if(!f)return;try{const d=JSON.parse(await f.text());if(d.format!=='MIVISION-NAMING-BACKUP'||!d.localStorage||typeof d.localStorage!=='object')throw new Error('Format backup tidak dikenali.');if(!confirm('Impor akan mengganti data lokal MIVISION Naming System pada browser ini. Lanjutkan?'))return;Object.entries(d.localStorage).forEach(([k,v])=>{if(k.startsWith('mv3_')&&typeof v==='string')localStorage.setItem(k,v)});customTypes=read('mv3_types',[]);customBrands=read('mv3_brands',[]);renderBrands();$('notes').value=read('mv3_notes','');renderTypes();$('backupStatus').textContent='Data backup berhasil dimuat ke browser ini.'}catch(err){$('backupStatus').textContent='Gagal impor: '+err.message}finally{e.target.value=''}});
+renderBrands();$('notes').value=read('mv3_notes','');setGroup('product');
+})();
+</script></body></html>
